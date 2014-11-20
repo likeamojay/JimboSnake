@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F012808F1A0ED1410017C8AE /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F012808E1A0ED1410017C8AE /* View.xib */; };
 		F034D2591A0AE94600CCF238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D2581A0AE94600CCF238 /* main.m */; };
 		F034D25C1A0AE94600CCF238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D25B1A0AE94600CCF238 /* AppDelegate.m */; };
 		F034D25F1A0AE94600CCF238 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D25E1A0AE94600CCF238 /* ViewController.m */; };
 		F034D2621A0AE94600CCF238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F034D2601A0AE94600CCF238 /* Main.storyboard */; };
 		F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F034D2631A0AE94600CCF238 /* Images.xcassets */; };
-		F034D2671A0AE94600CCF238 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F034D2651A0AE94600CCF238 /* LaunchScreen.xib */; };
 		F034D2731A0AE94600CCF238 /* JimboSnakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D2721A0AE94600CCF238 /* JimboSnakeTests.m */; };
+		F08240381A187FD500A2EB36 /* BorderMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F08240371A187FD500A2EB36 /* BorderMan.m */; };
+		F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F096F2CB1A1827A100C3D868 /* DBMan.m */; };
+		F096F2D41A18449500C3D868 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F096F2D31A18449500C3D868 /* libsqlite3.dylib */; };
+		F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */; };
+		F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C637F11A0ED91F005DA391 /* LauncherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F012808E1A0ED1410017C8AE /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		F034D2531A0AE94600CCF238 /* JimboSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JimboSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F034D2571A0AE94600CCF238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F034D2581A0AE94600CCF238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,10 +42,17 @@
 		F034D25E1A0AE94600CCF238 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F034D2611A0AE94600CCF238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F034D2631A0AE94600CCF238 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F034D2661A0AE94600CCF238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F034D26C1A0AE94600CCF238 /* JimboSnakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JimboSnakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F034D2711A0AE94600CCF238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F034D2721A0AE94600CCF238 /* JimboSnakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JimboSnakeTests.m; sourceTree = "<group>"; };
+		F08240361A187FD500A2EB36 /* BorderMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderMan.h; sourceTree = "<group>"; };
+		F08240371A187FD500A2EB36 /* BorderMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderMan.m; sourceTree = "<group>"; };
+		F096F2CA1A1827A100C3D868 /* DBMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMan.h; sourceTree = "<group>"; };
+		F096F2CB1A1827A100C3D868 /* DBMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMan.m; sourceTree = "<group>"; };
+		F096F2D31A18449500C3D868 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snakeIconScreen.png; sourceTree = "<group>"; };
+		F0C637F01A0ED91F005DA391 /* LauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherViewController.h; sourceTree = "<group>"; };
+		F0C637F11A0ED91F005DA391 /* LauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F096F2D41A18449500C3D868 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,7 @@
 		F034D24A1A0AE94600CCF238 = {
 			isa = PBXGroup;
 			children = (
+				F096F2D31A18449500C3D868 /* libsqlite3.dylib */,
 				F034D2551A0AE94600CCF238 /* JimboSnake */,
 				F034D26F1A0AE94600CCF238 /* JimboSnakeTests */,
 				F034D2541A0AE94600CCF238 /* Products */,
@@ -81,13 +96,20 @@
 		F034D2551A0AE94600CCF238 /* JimboSnake */ = {
 			isa = PBXGroup;
 			children = (
+				F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */,
 				F034D25A1A0AE94600CCF238 /* AppDelegate.h */,
 				F034D25B1A0AE94600CCF238 /* AppDelegate.m */,
+				F096F2CA1A1827A100C3D868 /* DBMan.h */,
+				F096F2CB1A1827A100C3D868 /* DBMan.m */,
+				F0C637F01A0ED91F005DA391 /* LauncherViewController.h */,
+				F0C637F11A0ED91F005DA391 /* LauncherViewController.m */,
+				F08240361A187FD500A2EB36 /* BorderMan.h */,
+				F08240371A187FD500A2EB36 /* BorderMan.m */,
 				F034D25D1A0AE94600CCF238 /* ViewController.h */,
 				F034D25E1A0AE94600CCF238 /* ViewController.m */,
 				F034D2601A0AE94600CCF238 /* Main.storyboard */,
 				F034D2631A0AE94600CCF238 /* Images.xcassets */,
-				F034D2651A0AE94600CCF238 /* LaunchScreen.xib */,
+				F012808E1A0ED1410017C8AE /* View.xib */,
 				F034D2561A0AE94600CCF238 /* Supporting Files */,
 			);
 			path = JimboSnake;
@@ -199,8 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F012808F1A0ED1410017C8AE /* View.xib in Resources */,
+				F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */,
 				F034D2621A0AE94600CCF238 /* Main.storyboard in Resources */,
-				F034D2671A0AE94600CCF238 /* LaunchScreen.xib in Resources */,
 				F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */,
 				F034D25F1A0AE94600CCF238 /* ViewController.m in Sources */,
+				F08240381A187FD500A2EB36 /* BorderMan.m in Sources */,
+				F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */,
 				F034D25C1A0AE94600CCF238 /* AppDelegate.m in Sources */,
 				F034D2591A0AE94600CCF238 /* main.m in Sources */,
 			);
@@ -250,14 +276,6 @@
 				F034D2611A0AE94600CCF238 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F034D2651A0AE94600CCF238 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F034D2661A0AE94600CCF238 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JimboSnake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JimboSnake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +432,7 @@
 				F034D2781A0AE94600CCF238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F034D2791A0AE94600CCF238 /* Build configuration list for PBXNativeTarget "JimboSnakeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +441,7 @@
 				F034D27B1A0AE94600CCF238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
