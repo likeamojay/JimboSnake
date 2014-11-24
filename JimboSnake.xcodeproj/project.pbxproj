@@ -17,6 +17,7 @@
 		F08240381A187FD500A2EB36 /* BorderMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F08240371A187FD500A2EB36 /* BorderMan.m */; };
 		F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F096F2CB1A1827A100C3D868 /* DBMan.m */; };
 		F096F2D41A18449500C3D868 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F096F2D31A18449500C3D868 /* libsqlite3.dylib */; };
+		F0ABE0151A23FADC00242E8C /* SOUND136.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* SOUND136.WAV */; };
 		F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */; };
 		F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C637F11A0ED91F005DA391 /* LauncherViewController.m */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		F096F2CA1A1827A100C3D868 /* DBMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMan.h; sourceTree = "<group>"; };
 		F096F2CB1A1827A100C3D868 /* DBMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMan.m; sourceTree = "<group>"; };
 		F096F2D31A18449500C3D868 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F0ABE0141A23FADC00242E8C /* SOUND136.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND136.WAV; sourceTree = "<group>"; };
 		F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snakeIconScreen.png; sourceTree = "<group>"; };
 		F0C637F01A0ED91F005DA391 /* LauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherViewController.h; sourceTree = "<group>"; };
 		F0C637F11A0ED91F005DA391 /* LauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewController.m; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				F096F2CA1A1827A100C3D868 /* DBMan.h */,
 				F096F2CB1A1827A100C3D868 /* DBMan.m */,
 				F0C637F01A0ED91F005DA391 /* LauncherViewController.h */,
+				F0ABE0141A23FADC00242E8C /* SOUND136.WAV */,
 				F0C637F11A0ED91F005DA391 /* LauncherViewController.m */,
 				F08240361A187FD500A2EB36 /* BorderMan.h */,
 				F08240371A187FD500A2EB36 /* BorderMan.m */,
@@ -223,6 +226,7 @@
 			files = (
 				F012808F1A0ED1410017C8AE /* View.xib in Resources */,
 				F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */,
+				F0ABE0151A23FADC00242E8C /* SOUND136.WAV in Resources */,
 				F034D2621A0AE94600CCF238 /* Main.storyboard in Resources */,
 				F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */,
 			);
