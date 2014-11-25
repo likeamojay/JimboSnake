@@ -18,4 +18,8 @@
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 - (IBAction)startButtonPressed:(UIButton *)sender;
 
+// for playing pinball background music
+@property (strong, nonatomic) AVAudioPlayer *backgroundMusicPlayer;
+
+
 @end

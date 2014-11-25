@@ -19,12 +19,27 @@ CGFloat initialSnakeY;
 
 - (void)viewDidLoad {
     
+    //Initialize sound effects
+    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"SOUND38"ofType:@"WAV"];
+    NSURL *fileURLCrashSound = [NSURL fileURLWithPath:filePathCrashSound];
+    self.snakeCrashedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLCrashSound error:nil];
+    [self.snakeCrashedPlayer prepareToPlay];
+    
+    NSString *filePathGameOverSound = [[NSBundle mainBundle] pathForResource:@"SOUND3"ofType:@"WAV"];
+    NSURL *fileURLGameOverSound = [NSURL fileURLWithPath:filePathGameOverSound];
+    self.gameOverSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLGameOverSound error:nil];
+    [self.gameOverSoundPlayer prepareToPlay];
+    
+    NSString *filePathButtonPressedSound = [[NSBundle mainBundle] pathForResource:@"SOUND8"ofType:@"WAV"];
+    NSURL *fileURLButtonPressedSound  = [NSURL fileURLWithPath:filePathButtonPressedSound ];
+    self.directionPressedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLButtonPressedSound  error:nil];
+    [self.directionPressedPlayer prepareToPlay];
+    
     
     // load view and hide back button
     [super viewDidLoad];
-    _gameOverLabel.hidden = YES;
     _tryAgainButton.hidden = YES;
-    
+    _gameOverButton.hidden = YES;
     // hide extra blocks
     _snakeBlock6.hidden = YES;
     _snakeBlock7.hidden = YES;
@@ -257,6 +272,10 @@ CGFloat initialSnakeY;
 }
 
 -(void)loser{
+    
+    //crash sound
+    self.snakeCrashedPlayer.currentTime = 0;
+    [self.snakeCrashedPlayer play];
 
     // lose a life
     lives--;
@@ -281,7 +300,7 @@ CGFloat initialSnakeY;
 
 -(void)gameOver
 {
-    
+  
     [_snakeTimer invalidate];
     _snakeTimer = nil;
     
@@ -294,7 +313,12 @@ CGFloat initialSnakeY;
     // Reset score to 0
     theScore = 0;
     // Game Over label
-    _gameOverLabel.hidden = NO;
+    _gameOverButton.hidden = NO;
+    
+    // game over sound
+    self.gameOverSoundPlayer.currentTime = 0;
+    [self.gameOverSoundPlayer play];
+    
    
 }
 
@@ -392,6 +416,10 @@ CGFloat initialSnakeY;
         ypos = 0;
         movingLeftOrRight = YES;
     }
+    
+    // play sound
+    self.directionPressedPlayer.currentTime = 0;
+    [self.directionPressedPlayer play];
 }
 
 - (IBAction)rightButtonPressed:(UIButton *)sender {
@@ -401,6 +429,10 @@ CGFloat initialSnakeY;
         ypos = 0;
         movingLeftOrRight = YES;
     }
+    
+    // play sound
+    self.directionPressedPlayer.currentTime = 0;
+    [self.directionPressedPlayer play];
 }
 
 - (IBAction)upButtonPressed:(UIButton *)sender {
@@ -409,7 +441,11 @@ CGFloat initialSnakeY;
         xpos = 0;
         ypos = -15;
         movingLeftOrRight = NO;
+        
     }
+    // play sound
+    self.directionPressedPlayer.currentTime = 0;
+    [self.directionPressedPlayer play];
 }
 
 - (IBAction)downButtonPressed:(UIButton *)sender {
@@ -419,6 +455,9 @@ CGFloat initialSnakeY;
         ypos = 15;
         movingLeftOrRight = NO;
     }
+    // play sound
+    self.directionPressedPlayer.currentTime = 0;
+    [self.directionPressedPlayer play];
 
 }
 

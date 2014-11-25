@@ -212,7 +212,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="5bZ-Ou-ffG">
-                                <rect key="frame" x="119" y="431" width="82" height="36"/>
+                                <rect key="frame" x="119" y="57" width="82" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Try Again">
@@ -224,13 +224,19 @@
                                     <action selector="upButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hkn-EV-RWS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H1I-P8-WHh">
-                                <rect key="frame" x="86" y="431" width="160" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="NDb-ne-rza">
+                                <rect key="frame" x="111" y="57" width="101" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Game Over">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgainButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2b6-la-tg4"/>
+                                    <action selector="upButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Aau-Wh-dpA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236153125763" green="0.4901961088180542" blue="0.16862745583057404" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -238,7 +244,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="food" destination="wxw-xs-lGA" id="buz-y0-RpV"/>
-                        <outlet property="gameOverLabel" destination="H1I-P8-WHh" id="anr-Di-js7"/>
+                        <outlet property="gameOverButton" destination="NDb-ne-rza" id="hYn-Ah-9UL"/>
                         <outlet property="levelLabel" destination="KX7-hS-jj8" id="Asb-7R-SLY"/>
                         <outlet property="livesLabel" destination="Eig-48-O2o" id="sz1-7S-mwT"/>
                         <outlet property="scoreLabel" destination="C03-il-U4r" id="Bmz-iB-Cgg"/>

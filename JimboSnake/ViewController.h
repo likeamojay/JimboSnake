@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DBMan.h"
-
-// initial graphics context
+#import <AVFoundation/AVFoundation.h>
 
 
 
@@ -58,13 +57,18 @@ BOOL snakeBlock20in;
 
 @interface ViewController : UIViewController
 
+//Sound effects
+@property (strong, nonatomic) AVAudioPlayer *directionPressedPlayer;
+@property (strong, nonatomic) AVAudioPlayer *gameOverSoundPlayer;
+@property (strong, nonatomic) AVAudioPlayer *snakeCrashedPlayer;
+
+
 // labels for current score, lives, and level
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *livesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
 
-
-@property (strong, nonatomic) IBOutlet UILabel *gameOverLabel;
+@property (strong, nonatomic) IBOutlet UIButton *gameOverButton;
 
 // left and right button actions
 - (IBAction)leftButtonPressed:(UIButton *)sender;
