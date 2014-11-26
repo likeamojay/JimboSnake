@@ -51,10 +51,10 @@ static DBMan *sharedInstance = nil;
         NSLog(@"Database created");
     char *errMsg;
     const char *createTableCommand = "CREATE TABLE IF NOT EXISTS scoreDB (ID INTEGER PRIMARY KEY, HIGH_SCORE INTEGER)";
-        if (sqlite3_exec(scoreDB,createTableCommand, NULL, NULL, &errMsg) != SQLITE_OK)
+        if (sqlite3_exec(scoreDB,createTableCommand, NULL, &command, &errMsg) !=SQLITE_OK)
         {
         isSuccess = NO;
-        NSLog(@"Failed to create score table");
+        NSLog(@"Prepare-error #%s: %s", errMsg, sqlite3_errmsg(scoreDB));
         
         }
          NSLog(@"table created");
