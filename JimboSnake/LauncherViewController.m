@@ -38,6 +38,12 @@
     
     // Preloads the buffer and prepares the audio for playing.
     [self.audioPlayer prepareToPlay];
+    
+    
+    NSString *fileClearButtonPlayer = [[NSBundle mainBundle] pathForResource:@"SOUND30"ofType:@"WAV"];
+    NSURL *fileURLClearButtonPlayer   = [NSURL fileURLWithPath:fileClearButtonPlayer];
+    self.clearButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLClearButtonPlayer   error:nil];
+    [self.clearButtonPlayer  prepareToPlay];
    
  
 }
@@ -49,8 +55,26 @@
 
 - (IBAction)startButtonPressed:(UIButton *)sender {
     
-    // Make sure the audio is at the start of the stream.
+    // play sound
     self.audioPlayer.currentTime = 0;
     [self.audioPlayer play];
+}
+- (IBAction)clearButtonPressed:(UIButton *)sender {
+    
+    // play sound
+    self.clearButtonPlayer.currentTime = 0;
+    [self.clearButtonPlayer play];
+    
+    // drop table from database
+    [[DBMan getSharedInstance]clearScores];
+    
+    
+    //Update the score field
+    _highestScoreLabel.text = @"0";
+    
+    //Recreate empty table
+    [[DBMan getSharedInstance]createDB];
+    
+    
 }
 @end
