@@ -79,7 +79,7 @@ static DBMan *sharedInstance = nil;
     {
         NSString *insertSQL =
         [NSString stringWithFormat:@"INSERT INTO scoreDB (HIGH_SCORE) VALUE(\"%ld\")",(long)[newScore integerValue]];
-        const char *insert_stmt = [insertSQL UTF8String];
+        const char *insert_stmt = (const char*)[insertSQL UTF8String];
         // prepare the save command
         sqlite3_prepare_v2(scoreDB, insert_stmt,-1, &command, NULL);
         

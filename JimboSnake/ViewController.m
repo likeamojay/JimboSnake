@@ -20,7 +20,7 @@ CGFloat initialSnakeY;
 - (void)viewDidLoad {
     
     //Initialize sound effects
-    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"SOUND38"ofType:@"WAV"];
+    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"SOUND7"ofType:@"WAV"];
     NSURL *fileURLCrashSound = [NSURL fileURLWithPath:filePathCrashSound];
     self.snakeCrashedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLCrashSound error:nil];
     [self.snakeCrashedPlayer prepareToPlay];
@@ -34,6 +34,11 @@ CGFloat initialSnakeY;
     NSURL *fileURLButtonPressedSound  = [NSURL fileURLWithPath:filePathButtonPressedSound ];
     self.directionPressedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLButtonPressedSound  error:nil];
     [self.directionPressedPlayer prepareToPlay];
+    
+    NSString *fileSnakeEatSound = [[NSBundle mainBundle] pathForResource:@"SOUND30"ofType:@"WAV"];
+    NSURL *fileURLSnakeEat  = [NSURL fileURLWithPath:fileSnakeEatSound];
+    self.snakeEatPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSnakeEat  error:nil];
+    [self.snakeEatPlayer prepareToPlay];
     
     
     // load view and hide back button
@@ -144,6 +149,10 @@ CGFloat initialSnakeY;
     // if snake eats the food
     if(CGRectIntersectsRect(_snakeBlock.frame, _food.frame))
     {
+        // play sound
+        self.snakeEatPlayer.currentTime = 0;
+        [self.snakeEatPlayer play];
+        
         [self moveFood];
         [self updateScore];
         
@@ -273,9 +282,7 @@ CGFloat initialSnakeY;
 
 -(void)loser{
     
-    //crash sound
-    self.snakeCrashedPlayer.currentTime = 0;
-    [self.snakeCrashedPlayer play];
+   
 
     // lose a life
     lives--;
@@ -284,6 +291,9 @@ CGFloat initialSnakeY;
     // if still have more lives then have another go at it.
     if(lives > 0)
     {
+        //crash sound
+        self.snakeCrashedPlayer.currentTime = 0;
+        [self.snakeCrashedPlayer play];
         [_snakeTimer invalidate];
         _tryAgainButton.hidden = NO;
         
@@ -496,6 +506,13 @@ CGFloat initialSnakeY;
     [self startTimer];
     _tryAgainButton.hidden = YES;
     
+
+}
+- (IBAction)gameOverButtonPressed:(UIButton *)sender {
+    
+    // play sound
+    self.directionPressedPlayer.currentTime = 0;
+    [self.directionPressedPlayer play];
 
 }
 @end

@@ -61,6 +61,7 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) AVAudioPlayer *directionPressedPlayer;
 @property (strong, nonatomic) AVAudioPlayer *gameOverSoundPlayer;
 @property (strong, nonatomic) AVAudioPlayer *snakeCrashedPlayer;
+@property (strong, nonatomic) AVAudioPlayer *snakeEatPlayer;
 
 
 // labels for current score, lives, and level
@@ -70,6 +71,7 @@ BOOL snakeBlock20in;
 
 @property (strong, nonatomic) IBOutlet UIButton *gameOverButton;
 
+- (IBAction)gameOverButtonPressed:(UIButton *)sender;
 // left and right button actions
 - (IBAction)leftButtonPressed:(UIButton *)sender;
 - (IBAction)rightButtonPressed:(UIButton *)sender;
