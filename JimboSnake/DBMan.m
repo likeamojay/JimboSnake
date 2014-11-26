@@ -50,7 +50,7 @@ static DBMan *sharedInstance = nil;
     {
         NSLog(@"Database created");
     char *errMsg;
-    const char *createTableCommand = "CREATE TABLE IF NOT EXISTS scoreDB (HIGH_SCORE INTEGER PRIMARY KEY";
+    const char *createTableCommand = "CREATE TABLE IF NOT EXISTS scoreDB (ID INTEGER PRIMARY KEY, HIGH_SCORE INTEGER)";
         if (sqlite3_exec(scoreDB,createTableCommand, NULL, NULL, &errMsg) != SQLITE_OK)
         {
         isSuccess = NO;
@@ -78,24 +78,27 @@ static DBMan *sharedInstance = nil;
     if (sqlite3_open(dbPathChar, &scoreDB) == SQLITE_OK)
     {
         NSString *insertSQL =
-        [NSString stringWithFormat:@"INSERT INTO scoreDB (HIGH_SCORE) VALUE(\"%ld\")",(long)[newScore integerValue]];
-        const char *insert_stmt = (const char*)[insertSQL UTF8String];
+        [NSString stringWithFormat:@"INSERT INTO scoreDB (HIGH_SCORE) VALUES(\"%ld\")",(long)[newScore integerValue]];
+        const char *insert_stmt = [insertSQL UTF8String];
         // prepare the save command
-        sqlite3_prepare_v2(scoreDB, insert_stmt,-1, &command, NULL);
-        
+        int result = sqlite3_prepare_v2(scoreDB, insert_stmt,-1, &command, NULL);
+        if( result!= SQLITE_OK);
+        {
+        NSLog(@"Prepare-error #%i: %s", result, sqlite3_errmsg(scoreDB));
+        }
+        result = sqlite3_step(command);
         // save command
-        if (sqlite3_step(command) == SQLITE_DONE)
+        if (result == SQLITE_DONE)
         {
             sqlite3_reset(command);
             return YES;
         }
         else
         {
-        NSLog(@"Could not save score");
+            NSLog(@"Step-error #%i for '%@': %s", result, insertSQL, sqlite3_errmsg(scoreDB));
         return NO;
         }
     }
-    NSLog(@"Could not open database from saveData");
     return NO;
     
     
