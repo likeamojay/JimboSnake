@@ -134,34 +134,31 @@ static DBMan *sharedInstance = nil;
 
 -(BOOL)clearScores
 {
-    const char *dbPathChar = [dbPath UTF8String];
-    if (sqlite3_open(dbPathChar, &scoreDB) == SQLITE_OK)
+    
+    NSString *docsDir;
+    NSArray *dirPaths;
+    BOOL isSuccess;
+      NSError *error;
+    
+    // Get the file directory
+    dirPaths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = dirPaths[0];
+    
+    // Build the path to the database file
+    dbPath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"scoreDB.db"]];
+    isSuccess = YES;
+    
+    // remove database
+    NSFileManager *fileman = [NSFileManager defaultManager];
+    if ([fileman fileExistsAtPath: dbPath ] == YES)
     {
-        NSString *dropSQL =
-        [NSString stringWithFormat:@"DROP TABLE IF EXISTS scoreDB"];
-        const char *drop_stmt = [dropSQL UTF8String];
-        // prepare the drop command
-        int result = sqlite3_prepare_v2(scoreDB, drop_stmt,-1, &command, NULL);
-        if( result!= SQLITE_OK);
-        {
-            NSLog(@"Prepare-error #%i: %s", result, sqlite3_errmsg(scoreDB));
-        }
-        result = sqlite3_step(command);
-        // save command
-        if (result == SQLITE_DONE)
-        {
-            sqlite3_reset(command);
-            return YES;
-        }
-        else
-        {
-            NSLog(@"Step-error #%i for '%@': %s", result, dropSQL, sqlite3_errmsg(scoreDB));
-            return NO;
-        }
+        [fileman removeItemAtPath:dbPath error:&error];
+        
     }
-    sqlite3_close(scoreDB);
+
     return YES;
   
 }
+
 
 @end
