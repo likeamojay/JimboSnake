@@ -161,16 +161,22 @@ CGFloat initialSnakeY;
     {
         
         level++;
-        difficulty = 0.4;
         _levelLabel.text = [NSString stringWithFormat:@"%d",level];
+        [_snakeTimer invalidate];
+         difficulty = 0.4;
+        [_snakeTimer fire];
+        
     }
         
         if(theScore == 10)
         {
             
             level++;
-            difficulty = 0.2;
             _levelLabel.text = [NSString stringWithFormat:@"%d",level];
+            [_snakeTimer invalidate];
+            difficulty = 0.2;
+            [_snakeTimer fire];
+
         }
    
     }
