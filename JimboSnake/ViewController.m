@@ -164,7 +164,7 @@ CGFloat initialSnakeY;
         _levelLabel.text = [NSString stringWithFormat:@"%d",level];
         [_snakeTimer invalidate];
          difficulty = 0.4;
-        [_snakeTimer fire];
+         [self startTimer];
         
     }
         
@@ -175,7 +175,7 @@ CGFloat initialSnakeY;
             _levelLabel.text = [NSString stringWithFormat:@"%d",level];
             [_snakeTimer invalidate];
             difficulty = 0.2;
-            [_snakeTimer fire];
+             [self startTimer];
 
         }
    

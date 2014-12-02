@@ -40,7 +40,7 @@
     [self.audioPlayer prepareToPlay];
     
     
-    NSString *fileClearButtonPlayer = [[NSBundle mainBundle] pathForResource:@"SOUND30"ofType:@"WAV"];
+    NSString *fileClearButtonPlayer = [[NSBundle mainBundle] pathForResource:@"SOUND9"ofType:@"WAV"];
     NSURL *fileURLClearButtonPlayer   = [NSURL fileURLWithPath:fileClearButtonPlayer];
     self.clearButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLClearButtonPlayer   error:nil];
     [self.clearButtonPlayer  prepareToPlay];

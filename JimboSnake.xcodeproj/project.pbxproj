@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F012808F1A0ED1410017C8AE /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F012808E1A0ED1410017C8AE /* View.xib */; };
+		F01E70071A2D9E8000ED7A06 /* SOUND9.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F01E70061A2D9E8000ED7A06 /* SOUND9.WAV */; };
 		F034D2591A0AE94600CCF238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D2581A0AE94600CCF238 /* main.m */; };
 		F034D25C1A0AE94600CCF238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D25B1A0AE94600CCF238 /* AppDelegate.m */; };
 		F034D25F1A0AE94600CCF238 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D25E1A0AE94600CCF238 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		F012808E1A0ED1410017C8AE /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		F01E70061A2D9E8000ED7A06 /* SOUND9.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND9.WAV; sourceTree = "<group>"; };
 		F034D2531A0AE94600CCF238 /* JimboSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JimboSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F034D2571A0AE94600CCF238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F034D2581A0AE94600CCF238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				F0D536861A255EDF00DD5957 /* SOUND30.WAV */,
 				F0D536841A255E7700DD5957 /* SOUND7.WAV */,
 				F0ABE0181A24083F00242E8C /* SOUND8.WAV */,
+				F01E70061A2D9E8000ED7A06 /* SOUND9.WAV */,
 				F0ABE01A1A24084D00242E8C /* SOUND3.WAV */,
 				F0C637F11A0ED91F005DA391 /* LauncherViewController.m */,
 				F08240361A187FD500A2EB36 /* BorderMan.h */,
@@ -240,6 +243,7 @@
 				F0ABE0191A24083F00242E8C /* SOUND8.WAV in Resources */,
 				F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */,
 				F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */,
+				F01E70071A2D9E8000ED7A06 /* SOUND9.WAV in Resources */,
 				F0ABE0151A23FADC00242E8C /* SOUND136.WAV in Resources */,
 				F034D2621A0AE94600CCF238 /* Main.storyboard in Resources */,
 				F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */,
