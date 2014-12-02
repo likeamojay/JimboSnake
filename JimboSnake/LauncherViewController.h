@@ -21,6 +21,9 @@
 // for playing clear button sound
 @property (strong, nonatomic) AVAudioPlayer *clearButtonPlayer;
 
+// bomb icon
+@property (strong, nonatomic) IBOutlet UIImageView *bomb;
+
 - (IBAction)clearButtonPressed:(UIButton *)sender;
 
 @end

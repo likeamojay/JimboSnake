@@ -21,6 +21,9 @@
     
     [[DBMan getSharedInstance]createDB];
     
+    // hide bomb icon
+    _bomb.hidden = YES;
+    
     // load highest score and place it on the screen
    _highestScoreLabel.text = [[DBMan getSharedInstance]getHighestScore];
     
@@ -59,22 +62,35 @@
     self.audioPlayer.currentTime = 0;
     [self.audioPlayer play];
 }
+
+
+
+-(void)Boom
+{
+    _highestScoreLabel.hidden = NO;
+    _bomb.hidden = YES;
+}
+
+
 - (IBAction)clearButtonPressed:(UIButton *)sender {
     
-    // play sound
+
+    _highestScoreLabel.hidden = YES;
+    _bomb.hidden = NO;
+    
+    
     self.clearButtonPlayer.currentTime = 0;
     [self.clearButtonPlayer play];
     
     // drop table from database
     [[DBMan getSharedInstance]clearScores];
     
-    
-    //Update the score field
-    _highestScoreLabel.text = @"0";
+
+    // Show the bomb for 1 second
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(Boom) userInfo:nil repeats:NO];
     
     //Recreate empty table
     [[DBMan getSharedInstance]createDB];
-    
     
 }
 @end

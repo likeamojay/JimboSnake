@@ -35,7 +35,7 @@ CGFloat initialSnakeY;
     self.directionPressedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLButtonPressedSound  error:nil];
     [self.directionPressedPlayer prepareToPlay];
     
-    NSString *fileSnakeEatSound = [[NSBundle mainBundle] pathForResource:@"SOUND30"ofType:@"WAV"];
+    NSString *fileSnakeEatSound = [[NSBundle mainBundle] pathForResource:@"SOUND28"ofType:@"WAV"];
     NSURL *fileURLSnakeEat  = [NSURL fileURLWithPath:fileSnakeEatSound];
     self.snakeEatPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSnakeEat  error:nil];
     [self.snakeEatPlayer prepareToPlay];

@@ -330,8 +330,18 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="JDw-0e-Sqo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gFE-QH-y5o">
+                                <rect key="frame" x="172" y="518" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Wall of Fame">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1YX-XJ-bkc" kind="modal" id="PFf-aR-zU1"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dca-fB-Kov">
-                                <rect key="frame" x="91" y="497" width="124" height="30"/>
+                                <rect key="frame" x="16" y="518" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear High Scores">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -340,12 +350,17 @@
                                     <action selector="clearButtonPressed:" destination="y8e-cY-hws" eventType="touchUpInside" id="CbX-lA-XvP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bomb12.png" id="rkz-uT-9XT">
+                                <rect key="frame" x="167" y="387" width="99" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.078431375319999996" green="0.43529415129999999" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="qd8-N7-SEV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="bomb" destination="rkz-uT-9XT" id="efp-xK-qXi"/>
                         <outlet property="highestScoreLabel" destination="0Tw-L0-gXT" id="7Sn-bZ-GY9"/>
                     </connections>
                 </viewController>
@@ -353,8 +368,43 @@
             </objects>
             <point key="canvasLocation" x="9" y="313"/>
         </scene>
+        <!--Wall View Controller-->
+        <scene sceneID="rUM-vd-9df">
+            <objects>
+                <viewController id="1YX-XJ-bkc" customClass="WallViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udT-eq-Tnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wall of Fame!" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" id="ydH-xm-yql">
+                                <rect key="frame" x="16" y="28" width="281" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kMd-QD-hlK">
+                                <rect key="frame" x="96" y="510" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to Launcher">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y8e-cY-hws" kind="modal" id="PXN-jk-qtF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078431375319999996" green="0.43529415129999999" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vr-vi-9jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="665"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bomb12.png" width="64" height="64"/>
         <image name="snakeIconScreen.png" width="120" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -362,4 +412,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="PXN-jk-qtF"/>
+    </inferredMetricsTieBreakers>
 </document>
