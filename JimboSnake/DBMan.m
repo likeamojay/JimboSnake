@@ -132,6 +132,69 @@ static DBMan *sharedInstance = nil;
     return nil;
 }
 
+
+-(NSMutableArray*)getAllScores
+{
+    NSMutableArray *highestScores;
+    const char *dbPathChar = [dbPath UTF8String];
+    if (sqlite3_open(dbPathChar, &scoreDB) == SQLITE_OK)
+    {
+       const char *selectAllSQL = "SELECT * FROM  HIGH_SCORE";
+                         
+       if(sqlite3_prepare(scoreDB, selectAllSQL, -1, &command, NULL) != SQLITE_OK)
+       {
+          NSLog(@"Problem with prepare statement:  %@", sqlite3_errmsg(scoreDB));
+                             
+       }
+       else{
+                             
+                             
+                             
+                             while (sqlite3_step(sqlStatement)==SQLITE_ROW) {
+                                 
+                                 Author * author = [[Author alloc] init];
+                                 
+                                 author.name = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement,1)];
+                                 
+                                 author.title = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement,2)];
+                                 
+                                 author.genre = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+                                 
+                                 [theauthors addObject:author];
+                                 
+                             }
+                             
+                         }
+                         
+                         }
+                         
+                         @catch (NSException *exception) {
+                             
+                             NSLog(@"Problem with prepare statement:  %@", sqlite3_errmsg(db));
+                             
+                         }
+                         
+                         @finally {
+                             
+                             sqlite3_finalize(sqlStatement);
+                             
+                             sqlite3_close(db);
+                             
+                             
+                             return theauthors;
+                             
+                         }
+        
+        
+    }
+    
+    else
+    {
+        NSLog(@"Could not open database from getAllScores");
+    }
+    
+}
+
 -(BOOL)clearScores
 {
     

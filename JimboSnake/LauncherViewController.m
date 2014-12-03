@@ -92,5 +92,10 @@
     //Recreate empty table
     [[DBMan getSharedInstance]createDB];
     
+    // load highest score and place it on the screen
+    _highestScoreLabel.text = [[DBMan getSharedInstance]getHighestScore];
+
+    
+    
 }
 @end

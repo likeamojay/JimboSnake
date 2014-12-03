@@ -157,7 +157,7 @@ CGFloat initialSnakeY;
         [self updateScore];
         
     //If score greater then advance to next level
-    if(theScore == 5)
+    if(theScore == 3)
     {
         
         level++;
@@ -174,10 +174,34 @@ CGFloat initialSnakeY;
             level++;
             _levelLabel.text = [NSString stringWithFormat:@"%d",level];
             [_snakeTimer invalidate];
-            difficulty = 0.2;
+            difficulty = 0.3;
              [self startTimer];
 
         }
+        
+        if(theScore == 15)
+        {
+            
+            level++;
+            _levelLabel.text = [NSString stringWithFormat:@"%d",level];
+            [_snakeTimer invalidate];
+            difficulty = 0.2;
+            [self startTimer];
+            
+        }
+        
+        if(theScore == 20)
+        {
+            
+            level++;
+            _levelLabel.text = [NSString stringWithFormat:@"%d",level];
+            [_snakeTimer invalidate];
+            difficulty = 0.1;
+            [self startTimer];
+            
+        }
+        
+        
    
     }
  
@@ -301,10 +325,9 @@ CGFloat initialSnakeY;
         self.snakeCrashedPlayer.currentTime = 0;
         [self.snakeCrashedPlayer play];
         [_snakeTimer invalidate];
+        
+        // show try again button
         _tryAgainButton.hidden = NO;
-        
-       
-        
     }
     else{
     // if no more lives then game is over
@@ -483,7 +506,6 @@ CGFloat initialSnakeY;
 - (IBAction)tryAgainButtonPressed:(UIButton *)sender {
     
     // reposition snake back to intial point
-    
     _snakeBlock.center = CGPointMake(initialSnakeX, initialSnakeY);
        _snakeBlock2.center = CGPointMake(_snakeBlock.center.x, _snakeBlock.center.y);
       _snakeBlock3.center = CGPointMake(_snakeBlock2.center.x, _snakeBlock2.center.y);
@@ -504,8 +526,6 @@ CGFloat initialSnakeY;
         _snakeBlock18.center = CGPointMake(_snakeBlock17.center.x, _snakeBlock17.center.y);
         _snakeBlock19.center = CGPointMake(_snakeBlock18.center.x, _snakeBlock18.center.y);
         _snakeBlock20.center = CGPointMake(_snakeBlock19.center.x, _snakeBlock19.center.y);
-    
-    
     
     
     // restart timer
