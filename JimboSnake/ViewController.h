@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "DBMan.h"
 #import <AVFoundation/AVFoundation.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
 
 
 
@@ -20,6 +24,10 @@ int ypos;
 int foodxpos;
 int foodypos;
 
+
+// position for food
+int extraLifexpos;
+int extraLifeypos;
 
 // Game Difficulty by speed of timer
 float difficulty;
@@ -55,7 +63,8 @@ BOOL snakeBlock18in;
 BOOL snakeBlock19in;
 BOOL snakeBlock20in;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIAlertViewDelegate>
+
 
 //Sound effects
 @property (strong, nonatomic) AVAudioPlayer *directionPressedPlayer;
@@ -104,6 +113,12 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock19;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock20;
 
+// extra life
+@property (strong, nonatomic) IBOutlet UIImageView *extraLife1;
+
+// name text field
+@property (strong,nonatomic) UIAlertView *HighScoreNote;
+@property (strong,nonatomic) UITextField *nameTextField;
 
 // Food
 @property (strong, nonatomic) IBOutlet UIImageView *food;
@@ -114,11 +129,14 @@ BOOL snakeBlock20in;
 @property (strong,nonatomic) NSTimer *snakeTimer;
 
 
+
+
 // Helpers
 -(void)snakeIsMoving;
 -(void)moveFood;
 -(void)updateScore;
 -(void)gameOver;
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 @end
 

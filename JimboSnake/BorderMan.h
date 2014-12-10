@@ -5,7 +5,7 @@
 //  Created by James Lane on 11/15/14.
 //  Copyright (c) 2014 James Lane. All rights reserved.
 //
-// Custom UIView subclass for managing game graphics
+// Custom UIView class for managing game graphics
 
 
 #import <UIKit/UIKit.h>

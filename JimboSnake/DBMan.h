@@ -22,7 +22,6 @@
 -(BOOL)createDB;
 -(BOOL) saveData:(NSString*)score;
 -(NSString*)getHighestScore;
--(NSMutableString*)getAllScores;
 -(BOOL)clearScores;
 
 @end

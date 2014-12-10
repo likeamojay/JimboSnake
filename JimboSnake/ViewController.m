@@ -7,15 +7,21 @@
 //
 
 #import "ViewController.h"
+#import "WallofFameViewController.h"
 #import "DBMan.h"
+
+// Begin Main interface and implementation
+
 @interface ViewController ()
 @end
 
 CGFloat initialSnakeX;
 CGFloat initialSnakeY;
-
+CGFloat initialExtraLifeX;
+CGFloat initialExtraLifeY;
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     
@@ -45,6 +51,11 @@ CGFloat initialSnakeY;
     [super viewDidLoad];
     _tryAgainButton.hidden = YES;
     _gameOverButton.hidden = YES;
+    
+    // Hide extra lives
+    _extraLife1.hidden = YES;
+    
+    
     // hide extra blocks
     _snakeBlock6.hidden = YES;
     _snakeBlock7.hidden = YES;
@@ -97,6 +108,10 @@ CGFloat initialSnakeY;
     initialSnakeX = _snakeBlock.center.x;
     initialSnakeY = _snakeBlock.center.y;
     
+    // set initial position of extra life off of the border
+    initialExtraLifeX = _extraLife1.center.x;
+    initialExtraLifeY = _extraLife1.center.y;
+    
     // position incrrements
     xpos = 15;
     ypos = 0;
@@ -110,13 +125,8 @@ CGFloat initialSnakeY;
 }
 
 -(void)startTimer{
-    
-    
-    
     // start the timer to animate the snake
     _snakeTimer = [NSTimer scheduledTimerWithTimeInterval:difficulty target:self selector:@selector(snakeIsMoving) userInfo:nil repeats:YES];
-    
-    
 }
 
 -(void)snakeIsMoving;
@@ -157,54 +167,90 @@ CGFloat initialSnakeY;
         [self updateScore];
         
     //If score greater then advance to next level
-    if(theScore == 3)
+    if(theScore == 5)
     {
-        
         level++;
         _levelLabel.text = [NSString stringWithFormat:@"%d",level];
         [_snakeTimer invalidate];
          difficulty = 0.4;
-         [self startTimer];
-        
+        [self startTimer];
     }
         
         if(theScore == 10)
         {
-            
             level++;
             _levelLabel.text = [NSString stringWithFormat:@"%d",level];
             [_snakeTimer invalidate];
             difficulty = 0.3;
              [self startTimer];
-
+                 [self moveExtraLife];
+            _extraLife1.hidden = NO;
         }
         
         if(theScore == 15)
         {
-            
             level++;
             _levelLabel.text = [NSString stringWithFormat:@"%d",level];
             [_snakeTimer invalidate];
             difficulty = 0.2;
             [self startTimer];
+            [self moveExtraLife];
+            _extraLife1.hidden = NO;
             
         }
         
         if(theScore == 20)
         {
-            
             level++;
             _levelLabel.text = [NSString stringWithFormat:@"%d",level];
             [_snakeTimer invalidate];
             difficulty = 0.1;
             [self startTimer];
+                 [self moveExtraLife];
+            _extraLife1.hidden = NO;
             
         }
-        
-        
-   
+        if(theScore == 25)
+        {
+            // win an extra life
+            [self moveExtraLife];
+            _extraLife1.hidden = NO;
+        }
+        if(theScore == 30)
+        {
+            // win an extra life
+            [self moveExtraLife];
+            _extraLife1.hidden = NO;
+        }
+        if(theScore == 35)
+        {
+            // win an extra life
+            [self moveExtraLife];
+            _extraLife1.hidden = NO;
+            
+        }
     }
  
+    //if snake eats an extra life
+    if(CGRectIntersectsRect(_snakeBlock.frame, _extraLife1.frame))
+    {
+        lives++;
+        _livesLabel.text = [NSString stringWithFormat:@"%d",lives];
+        
+        // hide and reposition
+        _extraLife1.hidden = YES;
+        _extraLife1.center = CGPointMake(initialExtraLifeX, initialExtraLifeY);
+        
+        // play sound
+        self.snakeEatPlayer.currentTime = 0;
+        [self.snakeEatPlayer play];
+        
+      
+        
+    }
+    
+  
+    
   // if snake crashes into itself
     // I know this is really inefficient and could've used NSArrays but it's simple
     if(CGRectIntersectsRect(_snakeBlock.frame, _snakeBlock3.frame))
@@ -281,17 +327,16 @@ CGFloat initialSnakeY;
     }
     
     // If snake crashes into the left or right side of border
-    if(_snakeBlock.center.x >= 272 || _snakeBlock.center.x <=45)
+    if(_snakeBlock.center.x >= 315 || _snakeBlock.center.x <=10)
     {
         [self loser];
     }
     // If snake crashes into up or down side of border
-    if(_snakeBlock.center.y >= 460 || _snakeBlock.center.y <= 58)
+    if(_snakeBlock.center.y >= 465 || _snakeBlock.center.y <= 50)
     {
         [self loser];
     }
-    
-   
+
 }
 
 -(void)moveFood
@@ -310,10 +355,26 @@ CGFloat initialSnakeY;
     _food.center = CGPointMake(foodxpos, foodypos);
 }
 
--(void)loser{
+-(void)moveExtraLife
+{
+    // Constraints:
+    // LeftX : 268, RightX = 48
+    // downY: 445, upY = 58
     
-   
+    // pick a random number between the constraints of the rectangle drawn in BorderMan.m
+    extraLifexpos = arc4random() %220;
+    extraLifexpos = foodxpos + 48;
+     extraLifeypos = arc4random() %387;
+    extraLifeypos = foodypos + 58;
+    
+    // move it based on random values
+    _extraLife1.center = CGPointMake(extraLifexpos, extraLifeypos);
+}
 
+
+
+
+-(void)loser{
     // lose a life
     lives--;
     _livesLabel.text = [NSString stringWithFormat:@"%d",lives];
@@ -339,18 +400,10 @@ CGFloat initialSnakeY;
 
 -(void)gameOver
 {
-  
+    // stop snake from moving
     [_snakeTimer invalidate];
     _snakeTimer = nil;
-    
-    // Save Score in database
-    [[DBMan getSharedInstance]saveData:[NSString stringWithFormat:@"%2d",theScore]];
-    // Reset lives back to 5
-    lives = 5;
-    // Reset level back to 1
-    level = 1;
-    // Reset score to 0
-    theScore = 0;
+
     // Game Over label
     _gameOverButton.hidden = NO;
     
@@ -358,13 +411,58 @@ CGFloat initialSnakeY;
     self.gameOverSoundPlayer.currentTime = 0;
     [self.gameOverSoundPlayer play];
     
-   
+    // current high score
+    int currentHighScore = (int)[[DBMan getSharedInstance]getHighestScore].integerValue;
+    
+    // Save Score in database
+    [[DBMan getSharedInstance]saveData:[NSString stringWithFormat:@"%2d",theScore]];
+    
+    // if latest high score in database is less than this one
+    if(currentHighScore < theScore)
+    {
+        // alert for new score
+        _HighScoreNote = [[UIAlertView alloc] initWithTitle:@"You made a new high score!" message:@"Enter your name to be in the Wall of Fame" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+        _HighScoreNote.alertViewStyle = UIAlertViewStylePlainTextInput;
+        [[_HighScoreNote textFieldAtIndex:0] setPlaceholder:@"Your Name Here"];
+        [_HighScoreNote show];
+       
+    }
+    
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSMutableString *theNameAndScore = [NSMutableString stringWithFormat:@"%2d",theScore];
+    
+    if (buttonIndex == 1) {
+         NSLog(@"Save button pressed");
+        
+        // Get the player's name
+        _nameTextField = [alertView textFieldAtIndex:0];
+        [theNameAndScore appendString:@" "];
+        [theNameAndScore appendString:_nameTextField.text];
+        NSLog(@"%@",theNameAndScore);
+   
+        // Send players name over to WallofFameViewController to be processed and then sent to server
+       [[WallofFameViewController getSharedInstance]sendAndReceiveThenUpdateTable:theNameAndScore];
+          }
+    
+    // close alert
+     [_HighScoreNote dismissWithClickedButtonIndex:1 animated:YES];
+    
+    // Reset lives back to 5
+    lives = 5;
+    // Reset level back to 1
+    level = 1;
+    // Reset score to 0
+    theScore = 0;
+}
+
+
 
 
 -(void)updateScore
 {
-    
     // Update local score
     theScore++;
     
@@ -435,10 +533,7 @@ CGFloat initialSnakeY;
             break;
         default:
             break;
-            
-    }
-
-   
+       }
 }
 
 
@@ -500,9 +595,6 @@ CGFloat initialSnakeY;
 
 }
 
-
-
-
 - (IBAction)tryAgainButtonPressed:(UIButton *)sender {
     
     // reposition snake back to intial point
@@ -535,11 +627,20 @@ CGFloat initialSnakeY;
 
 }
 - (IBAction)gameOverButtonPressed:(UIButton *)sender {
-    
     // play sound
     self.directionPressedPlayer.currentTime = 0;
     [self.directionPressedPlayer play];
 
 }
 
+
+// Rotation Handler
+-(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight|| toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
+    {
+        
+        NSLog(@"Go to Landscape Mode");
+    }
+}
 @end
+
