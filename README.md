@@ -7,8 +7,7 @@ New Features for 2.0!
 - New Sound Effects!
 - Makes an explosion sound and shows a bomb whenever score database is cleared by user!
 - Earn bonus lives as you increase your score!
-- Bundled with simple Java Socket Server that takes high scores, sends them to the server for a timestamp, then
-loads them back into a Wall of Fame.
+- Replace buttons to direct snake with swipe gestures
 
 
 My Version of Snake for iOS 
