@@ -80,12 +80,25 @@ BOOL snakeBlock20in;
 
 @property (strong, nonatomic) IBOutlet UIButton *gameOverButton;
 
-- (IBAction)gameOverButtonPressed:(UIButton *)sender;
-// left and right button actions
-- (IBAction)leftButtonPressed:(UIButton *)sender;
-- (IBAction)rightButtonPressed:(UIButton *)sender;
-- (IBAction)upButtonPressed:(UIButton *)sender;
-- (IBAction)downButtonPressed:(UIButton *)sender;
+
+// Listeners for swipe
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *snakeSwipedDown;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *snakeSwipedUp;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *snakeSwipedRight;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *snakeSwipedLeft;
+
+
+
+
+
+
+
+// Button handlers
+- (IBAction)gameOverButtonPressed:(UISwipeGestureRecognizer *)sender;
+- (IBAction)leftButtonPressed:(UISwipeGestureRecognizer *)sender;
+- (IBAction)rightButtonPressed:(UISwipeGestureRecognizer *)sender;
+- (IBAction)upButtonPressed:(UISwipeGestureRecognizer*)sender;
+- (IBAction)downButtonPressed:(UISwipeGestureRecognizer *)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *tryAgainButton;
 - (IBAction)tryAgainButtonPressed:(UIButton *)sender;
@@ -124,7 +137,6 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) IBOutlet UIImageView *food;
 
 
-
 //Timer for the snake
 @property (strong,nonatomic) NSTimer *snakeTimer;
 
@@ -137,6 +149,6 @@ BOOL snakeBlock20in;
 -(void)updateScore;
 -(void)gameOver;
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
-
+- (void)dismissAlert;
 @end
 

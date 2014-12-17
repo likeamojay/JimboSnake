@@ -20,8 +20,8 @@ CGFloat initialSnakeY;
 CGFloat initialExtraLifeX;
 CGFloat initialExtraLifeY;
 
-@implementation ViewController
 
+@implementation ViewController
 
 - (void)viewDidLoad {
     
@@ -90,6 +90,28 @@ CGFloat initialExtraLifeY;
     snakeBlock19in = NO;
     snakeBlock20in = NO;
     
+    // Set up swipe listeners to call former buttonPressed methods
+    _snakeSwipedLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector
+                       (leftButtonPressed:)];
+    [_snakeSwipedLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:_snakeSwipedLeft];
+    
+    _snakeSwipedRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightButtonPressed:)];
+    [_snakeSwipedRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:_snakeSwipedRight];
+    
+    _snakeSwipedDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(downButtonPressed:)];
+    [_snakeSwipedDown setDirection:UISwipeGestureRecognizerDirectionDown];
+    [self.view addGestureRecognizer:_snakeSwipedDown];
+    
+
+    _snakeSwipedUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(upButtonPressed:)];
+    [_snakeSwipedUp setDirection:UISwipeGestureRecognizerDirectionUp];
+    [self.view addGestureRecognizer:_snakeSwipedUp];
+    
+
+    
+
     // Initialize score to 0
     theScore = 0;
     _scoreLabel.text = [NSString stringWithFormat:@"%2d",theScore];
@@ -118,7 +140,9 @@ CGFloat initialExtraLifeY;
 
     // set difficulty to level 1 = 0.6s
     difficulty = 0.6;
- 
+    
+    
+    // Start Timer
     [self startTimer];
 
     
@@ -248,7 +272,6 @@ CGFloat initialExtraLifeY;
       
         
     }
-    
   
     
   // if snake crashes into itself
@@ -332,7 +355,7 @@ CGFloat initialExtraLifeY;
         [self loser];
     }
     // If snake crashes into up or down side of border
-    if(_snakeBlock.center.y >= 465 || _snakeBlock.center.y <= 50)
+    if(_snakeBlock.center.y >= 545 || _snakeBlock.center.y <= 50)
     {
         [self loser];
     }
@@ -430,6 +453,11 @@ CGFloat initialExtraLifeY;
     
 }
 
+- (void)dismissAlert
+{
+    [self.HighScoreNote dismissWithClickedButtonIndex:0 animated:YES];
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     NSMutableString *theNameAndScore = [NSMutableString stringWithFormat:@"%2d",theScore];
@@ -444,11 +472,8 @@ CGFloat initialExtraLifeY;
         NSLog(@"%@",theNameAndScore);
    
         // Send players name over to WallofFameViewController to be processed and then sent to server
-       [[WallofFameViewController getSharedInstance]sendAndReceiveThenUpdateTable:theNameAndScore];
+        [[WallofFameViewController getSharedInstance]sendAndReceiveThenUpdateTable:theNameAndScore];
           }
-    
-    // close alert
-     [_HighScoreNote dismissWithClickedButtonIndex:1 animated:YES];
     
     // Reset lives back to 5
     lives = 5;
@@ -542,7 +567,7 @@ CGFloat initialExtraLifeY;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)leftButtonPressed:(UIButton *)sender {
+- (IBAction)leftButtonPressed:(UISwipeGestureRecognizer *)sender {
     
     if(movingLeftOrRight == NO)
     {
@@ -556,7 +581,7 @@ CGFloat initialExtraLifeY;
     [self.directionPressedPlayer play];
 }
 
-- (IBAction)rightButtonPressed:(UIButton *)sender {
+- (IBAction)rightButtonPressed:(UISwipeGestureRecognizer *)sender {
     if(movingLeftOrRight == NO)
     {
         xpos = 15;
@@ -569,7 +594,7 @@ CGFloat initialExtraLifeY;
     [self.directionPressedPlayer play];
 }
 
-- (IBAction)upButtonPressed:(UIButton *)sender {
+- (IBAction)upButtonPressed:(UISwipeGestureRecognizer *)sender {
     if(movingLeftOrRight == YES)
     {
         xpos = 0;
@@ -582,7 +607,7 @@ CGFloat initialExtraLifeY;
     [self.directionPressedPlayer play];
 }
 
-- (IBAction)downButtonPressed:(UIButton *)sender {
+- (IBAction)downButtonPressed:(UISwipeGestureRecognizer *)sender {
     if(movingLeftOrRight == YES)
     {
         xpos = 0;
@@ -638,7 +663,9 @@ CGFloat initialExtraLifeY;
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight|| toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
     {
-        
+        //crash sound
+        self.snakeCrashedPlayer.currentTime = 0;
+        [self.snakeCrashedPlayer play];
         NSLog(@"Go to Landscape Mode");
     }
 }

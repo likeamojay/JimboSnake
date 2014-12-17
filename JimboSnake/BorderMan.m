@@ -23,7 +23,7 @@ CGRect rectangle;
     CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     
     // set coordinates and dimensions
-    rectangle = CGRectMake(10, 50, 300, 420);
+    rectangle = CGRectMake(10, 50, 300, 500);
     
     // put in on the screen
     CGContextAddRect(context, rectangle);

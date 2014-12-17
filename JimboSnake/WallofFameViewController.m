@@ -7,6 +7,7 @@
 //
 
 #import "WallofFameViewController.h"
+//#import "ViewController.h"
 
 
 //sharing instance
@@ -85,14 +86,11 @@ void ConnectCallBack(
 
 -(BOOL)sendAndReceiveThenUpdateTable:(NSMutableString*)scoreAndName
 {
-    
-     // Character array Message to send to server
-
-    
-    // read into character array
+    //[[ViewController getSharedInstance]dismissAlert];
+     
+     // read into character array
     const char* utf8String = [scoreAndName UTF8String];
     size_t len = strlen(utf8String) + 1;
-    
     char msg[len];
     memcpy(msg, utf8String, len);
     
@@ -111,7 +109,7 @@ void ConnectCallBack(
     theName.sin_port = htons(7890);
     theName.sin_family = AF_INET;
     
-    hp = gethostbyname("10.0.1.18");
+    hp = gethostbyname("localhost");
     if( hp == NULL ) {
         NSLog(@"Could not get host");
         return NO;
@@ -135,10 +133,10 @@ void ConnectCallBack(
     
     NSArray *list_array = [data componentsSeparatedByString:@":"];
     
+    
+    
     // update table view
     self.scoreArray = list_array;
-    
-    
     return YES;
 
 }

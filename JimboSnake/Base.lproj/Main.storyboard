@@ -54,62 +54,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="FwT-Nc-15N">
-                                <rect key="frame" x="231" y="496" width="68" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Right">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="rightButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NaZ-rl-4hQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="LHJ-b5-q5t">
-                                <rect key="frame" x="16" y="496" width="68" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Left">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="leftButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gYp-Fd-YRw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="8ub-r6-Sa5">
-                                <rect key="frame" x="126" y="480" width="68" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Up">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="upButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oBo-Je-tfK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Jdc-7s-Rd7">
-                                <rect key="frame" x="126" y="524" width="68" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Down">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="downButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aRr-bD-vWU"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rMd-Ci-P2h">
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5KI-rf-WeE">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5KI-rf-WeE">
                                 <rect key="frame" x="189" y="252" width="15" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="E0z-od-0e6" appends="YES" id="h2g-qm-rcc"/>
+                                    <outletCollection property="gestureRecognizers" destination="0aR-p6-qPm" appends="YES" id="fDS-Q0-HMH"/>
+                                    <outletCollection property="gestureRecognizers" destination="DR0-BR-XyK" appends="YES" id="8yH-E2-kic"/>
+                                    <outletCollection property="gestureRecognizers" destination="e0z-Kb-Ury" appends="YES" id="d1y-q9-8ri"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="B2s-0F-nOG">
                                 <rect key="frame" x="159" y="252" width="15" height="15"/>
@@ -202,7 +161,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Pg0-Jh-EmO">
-                                <rect key="frame" x="129" y="252" width="15" height="15"/>
+                                <rect key="frame" x="126" y="252" width="18" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -274,10 +233,18 @@
                         <outlet property="snakeBlock7" destination="i1f-Ky-Vfu" id="1up-T4-lCe"/>
                         <outlet property="snakeBlock8" destination="KC7-4X-hQH" id="oV3-QX-2ei"/>
                         <outlet property="snakeBlock9" destination="cdf-Hn-fVe" id="WO7-TF-1ZT"/>
+                        <outlet property="snakeSwipedDown" destination="E0z-od-0e6" id="Y9T-CW-5iJ"/>
+                        <outlet property="snakeSwipedLeft" destination="e0z-Kb-Ury" id="m2T-H2-TYE"/>
+                        <outlet property="snakeSwipedRight" destination="DR0-BR-XyK" id="8if-RF-fDA"/>
+                        <outlet property="snakeSwipedUp" destination="0aR-p6-qPm" id="wqE-nn-Nru"/>
                         <outlet property="tryAgainButton" destination="5bZ-Ou-ffG" id="woW-RL-2dR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="E0z-od-0e6"/>
+                <swipeGestureRecognizer direction="up" id="0aR-p6-qPm"/>
+                <swipeGestureRecognizer direction="right" id="DR0-BR-XyK"/>
+                <swipeGestureRecognizer direction="left" id="e0z-Kb-Ury"/>
             </objects>
             <point key="canvasLocation" x="476" y="367"/>
         </scene>
@@ -421,6 +388,19 @@
             </objects>
             <point key="canvasLocation" x="-401" y="665"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="o6l-yy-BkM">
+            <objects>
+                <viewController id="BJE-R1-B9Y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLh-NE-hgt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmh-2B-wJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="bomb12.png" width="64" height="64"/>
@@ -433,6 +413,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PBU-KL-TGX"/>
+        <segue reference="uq4-hj-NrQ"/>
     </inferredMetricsTieBreakers>
 </document>
