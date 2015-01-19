@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "WallofFameViewController.h"
 #import "DBMan.h"
 
 // Begin Main interface and implementation
@@ -41,7 +40,7 @@ CGFloat initialExtraLifeY;
     self.directionPressedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLButtonPressedSound  error:nil];
     [self.directionPressedPlayer prepareToPlay];
     
-    NSString *fileSnakeEatSound = [[NSBundle mainBundle] pathForResource:@"SOUND28"ofType:@"WAV"];
+    NSString *fileSnakeEatSound = [[NSBundle mainBundle] pathForResource:@"chomp"ofType:@"mp3"];
     NSURL *fileURLSnakeEat  = [NSURL fileURLWithPath:fileSnakeEatSound];
     self.snakeEatPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSnakeEat  error:nil];
     [self.snakeEatPlayer prepareToPlay];
@@ -109,7 +108,6 @@ CGFloat initialExtraLifeY;
     [_snakeSwipedUp setDirection:UISwipeGestureRecognizerDirectionUp];
     [self.view addGestureRecognizer:_snakeSwipedUp];
     
-
     
 
     // Initialize score to 0
@@ -471,8 +469,13 @@ CGFloat initialExtraLifeY;
         [theNameAndScore appendString:_nameTextField.text];
         NSLog(@"%@",theNameAndScore);
    
-        // Send players name over to WallofFameViewController to be processed and then sent to server
-        [[WallofFameViewController getSharedInstance]sendAndReceiveThenUpdateTable:theNameAndScore];
+        // Send players name over to WallofFameViewController to be put in the table
+        
+        
+        
+        
+        
+        
           }
     
     // Reset lives back to 5
@@ -620,7 +623,8 @@ CGFloat initialExtraLifeY;
 
 }
 
-- (IBAction)tryAgainButtonPressed:(UIButton *)sender {
+
+- (IBAction)tryAgainButtonTapped:(UITapGestureRecognizer *)sender {
     
     // reposition snake back to intial point
     _snakeBlock.center = CGPointMake(initialSnakeX, initialSnakeY);
@@ -659,15 +663,5 @@ CGFloat initialExtraLifeY;
 }
 
 
-// Rotation Handler
--(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight|| toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
-    {
-        //crash sound
-        self.snakeCrashedPlayer.currentTime = 0;
-        [self.snakeCrashedPlayer play];
-        NSLog(@"Go to Landscape Mode");
-    }
-}
 @end
 

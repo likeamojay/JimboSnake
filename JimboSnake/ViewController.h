@@ -88,11 +88,6 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *snakeSwipedLeft;
 
 
-
-
-
-
-
 // Button handlers
 - (IBAction)gameOverButtonPressed:(UISwipeGestureRecognizer *)sender;
 - (IBAction)leftButtonPressed:(UISwipeGestureRecognizer *)sender;
@@ -100,8 +95,10 @@ BOOL snakeBlock20in;
 - (IBAction)upButtonPressed:(UISwipeGestureRecognizer*)sender;
 - (IBAction)downButtonPressed:(UISwipeGestureRecognizer *)sender;
 
-@property (strong, nonatomic) IBOutlet UIButton *tryAgainButton;
-- (IBAction)tryAgainButtonPressed:(UIButton *)sender;
+// Try again button and listener
+- (IBAction)tryAgainButtonTapped:(UITapGestureRecognizer *)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *tryAgainButton;
+
 
 // single block for the snake
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock;
@@ -139,8 +136,6 @@ BOOL snakeBlock20in;
 
 //Timer for the snake
 @property (strong,nonatomic) NSTimer *snakeTimer;
-
-
 
 
 // Helpers
