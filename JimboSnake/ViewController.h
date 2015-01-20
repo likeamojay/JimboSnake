@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DBMan.h"
 #import <AVFoundation/AVFoundation.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
+
 
 
 

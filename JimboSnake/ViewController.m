@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WallofFame.h"
 #import "DBMan.h"
 
 // Begin Main interface and implementation
@@ -451,11 +452,13 @@ CGFloat initialExtraLifeY;
     
 }
 
+// close alert if save button is pressed
 - (void)dismissAlert
 {
     [self.HighScoreNote dismissWithClickedButtonIndex:0 animated:YES];
 }
 
+//
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     NSMutableString *theNameAndScore = [NSMutableString stringWithFormat:@"%2d",theScore];
@@ -470,14 +473,9 @@ CGFloat initialExtraLifeY;
         NSLog(@"%@",theNameAndScore);
    
         // Send players name over to WallofFameViewController to be put in the table
-        
-        
-        
-        
-        
-        
-          }
-    
+        [[WallofFame getSharedInstance] newScore:(theNameAndScore)];
+      
+    }
     // Reset lives back to 5
     lives = 5;
     // Reset level back to 1
@@ -485,8 +483,6 @@ CGFloat initialExtraLifeY;
     // Reset score to 0
     theScore = 0;
 }
-
-
 
 
 -(void)updateScore

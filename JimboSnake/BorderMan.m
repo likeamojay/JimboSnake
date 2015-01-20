@@ -18,7 +18,7 @@ CGRect rectangle;
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // thickness of line
-    CGContextSetLineWidth(context, 1.0);
+    CGContextSetLineWidth(context, 1.5);
     // make it black
     CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     
