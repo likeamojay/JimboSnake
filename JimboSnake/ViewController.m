@@ -390,7 +390,7 @@ CGFloat initialExtraLifeY;
     extraLifeypos = foodypos + 58;
     
     // move it based on random values
-    _extraLife1.center = CGPointMake(extraLifexpos, extraLifeypos);
+    _extraLife1.center = CGPointMake(extraLifexpos-10, extraLifeypos-10);
 }
 
 
