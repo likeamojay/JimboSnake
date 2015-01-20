@@ -197,6 +197,8 @@ CGFloat initialExtraLifeY;
         [_snakeTimer invalidate];
          difficulty = 0.4;
         [self startTimer];
+        [self moveExtraLife];
+        _extraLife1.hidden = NO;
     }
         
         if(theScore == 10)
