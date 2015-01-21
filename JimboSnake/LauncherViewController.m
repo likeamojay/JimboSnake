@@ -29,7 +29,7 @@
     
     
     //Get the file path to the sound
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"SOUND136"
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"start"
                                                          ofType:@"WAV"];
     
     // Convert the file path to a URL object.

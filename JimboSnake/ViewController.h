@@ -93,8 +93,8 @@ BOOL snakeBlock20in;
 - (IBAction)downButtonPressed:(UISwipeGestureRecognizer *)sender;
 
 // Try again button and listener
-- (IBAction)tryAgainButtonTapped:(UITapGestureRecognizer *)sender;
-@property (strong, nonatomic) IBOutlet UIImageView *tryAgainButton;
+@property (strong, nonatomic) IBOutlet UIButton *tryAgainButton;
+- (IBAction)tryAgainButtonPressed:(UIButton *)sender;
 
 
 // single block for the snake

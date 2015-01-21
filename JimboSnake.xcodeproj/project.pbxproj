@@ -15,6 +15,8 @@
 		F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F034D2631A0AE94600CCF238 /* Images.xcassets */; };
 		F034D2731A0AE94600CCF238 /* JimboSnakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D2721A0AE94600CCF238 /* JimboSnakeTests.m */; };
 		F04504F41A35607500B63718 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04504F31A35607500B63718 /* bomb.mp3 */; };
+		F04E7D1A1A6DF87B00EA838A /* slip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04E7D191A6DF87B00EA838A /* slip.mp3 */; };
+		F04E7D1E1A6DFD1900EA838A /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = F04E7D1D1A6DFD1900EA838A /* gameover.png */; };
 		F0530DAD1A3974A7005256CB /* DBManTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F0530DAC1A3974A7005256CB /* DBManTest.m */; };
 		F0530DAF1A397764005256CB /* LauncherViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F0530DAE1A397764005256CB /* LauncherViewControllerTest.m */; };
 		F0530DB11A397868005256CB /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F0530DB01A397868005256CB /* ViewControllerTest.m */; };
@@ -24,12 +26,11 @@
 		F05D82161A6DA3E900416740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05D82151A6DA3E900416740 /* Main.storyboard */; };
 		F05D821C1A6DBC9800416740 /* WallofFame.m in Sources */ = {isa = PBXBuildFile; fileRef = F05D821B1A6DBC9800416740 /* WallofFame.m */; };
 		F08240381A187FD500A2EB36 /* BorderMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F08240371A187FD500A2EB36 /* BorderMan.m */; };
+		F088FFDA1A6EF4DB00A9D3E1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F088FFD91A6EF4DB00A9D3E1 /* SettingsViewController.m */; };
 		F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F096F2CB1A1827A100C3D868 /* DBMan.m */; };
 		F096F2D41A18449500C3D868 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F096F2D31A18449500C3D868 /* libsqlite3.dylib */; };
-		F0ABE0151A23FADC00242E8C /* SOUND136.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* SOUND136.WAV */; };
-		F0ABE0191A24083F00242E8C /* SOUND8.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0181A24083F00242E8C /* SOUND8.WAV */; };
+		F0ABE0151A23FADC00242E8C /* start.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* start.WAV */; };
 		F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE01A1A24084D00242E8C /* SOUND3.WAV */; };
-		F0BBE6121A2E72230027B8C0 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0BBE6111A2E72230027B8C0 /* song.mp3 */; };
 		F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */; };
 		F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C637F11A0ED91F005DA391 /* LauncherViewController.m */; };
 		F0D536851A255E7700DD5957 /* SOUND7.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0D536841A255E7700DD5957 /* SOUND7.WAV */; };
@@ -61,6 +62,8 @@
 		F034D2711A0AE94600CCF238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F034D2721A0AE94600CCF238 /* JimboSnakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JimboSnakeTests.m; sourceTree = "<group>"; };
 		F04504F31A35607500B63718 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
+		F04E7D191A6DF87B00EA838A /* slip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slip.mp3; sourceTree = "<group>"; };
+		F04E7D1D1A6DFD1900EA838A /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
 		F0530DAC1A3974A7005256CB /* DBManTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManTest.m; sourceTree = "<group>"; };
 		F0530DAE1A397764005256CB /* LauncherViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewControllerTest.m; sourceTree = "<group>"; };
 		F0530DB01A397868005256CB /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
@@ -72,13 +75,13 @@
 		F05D821B1A6DBC9800416740 /* WallofFame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallofFame.m; sourceTree = "<group>"; };
 		F08240361A187FD500A2EB36 /* BorderMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderMan.h; sourceTree = "<group>"; };
 		F08240371A187FD500A2EB36 /* BorderMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderMan.m; sourceTree = "<group>"; };
+		F088FFD81A6EF4DB00A9D3E1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		F088FFD91A6EF4DB00A9D3E1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		F096F2CA1A1827A100C3D868 /* DBMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMan.h; sourceTree = "<group>"; };
 		F096F2CB1A1827A100C3D868 /* DBMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMan.m; sourceTree = "<group>"; };
 		F096F2D31A18449500C3D868 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		F0ABE0141A23FADC00242E8C /* SOUND136.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND136.WAV; sourceTree = "<group>"; };
-		F0ABE0181A24083F00242E8C /* SOUND8.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND8.WAV; sourceTree = "<group>"; };
+		F0ABE0141A23FADC00242E8C /* start.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.WAV; sourceTree = "<group>"; };
 		F0ABE01A1A24084D00242E8C /* SOUND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND3.WAV; sourceTree = "<group>"; };
-		F0BBE6111A2E72230027B8C0 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snakeIconScreen.png; sourceTree = "<group>"; };
 		F0C637F01A0ED91F005DA391 /* LauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherViewController.h; sourceTree = "<group>"; };
 		F0C637F11A0ED91F005DA391 /* LauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewController.m; sourceTree = "<group>"; };
@@ -133,20 +136,22 @@
 				F096F2CA1A1827A100C3D868 /* DBMan.h */,
 				F096F2CB1A1827A100C3D868 /* DBMan.m */,
 				F0C637F01A0ED91F005DA391 /* LauncherViewController.h */,
-				F0ABE0141A23FADC00242E8C /* SOUND136.WAV */,
+				F0ABE0141A23FADC00242E8C /* start.WAV */,
 				F05D820E1A6D8CE700416740 /* 120218TryAgain.png */,
 				F0F36DF21A356E1100707037 /* mariomushroom1up_vectorized.png */,
 				F0171E681A6CE2B6003C9703 /* high_score_logo.gif */,
 				F04504F31A35607500B63718 /* bomb.mp3 */,
 				F05D82111A6D949A00416740 /* chomp.mp3 */,
+				F04E7D1D1A6DFD1900EA838A /* gameover.png */,
 				F0D536841A255E7700DD5957 /* SOUND7.WAV */,
-				F0ABE0181A24083F00242E8C /* SOUND8.WAV */,
+				F04E7D191A6DF87B00EA838A /* slip.mp3 */,
 				F0ABE01A1A24084D00242E8C /* SOUND3.WAV */,
-				F0BBE6111A2E72230027B8C0 /* song.mp3 */,
 				F03272011A2E5A79000C6FFB /* bomb12.png */,
 				F0C637F11A0ED91F005DA391 /* LauncherViewController.m */,
 				F08240361A187FD500A2EB36 /* BorderMan.h */,
 				F05D82151A6DA3E900416740 /* Main.storyboard */,
+				F088FFD81A6EF4DB00A9D3E1 /* SettingsViewController.h */,
+				F088FFD91A6EF4DB00A9D3E1 /* SettingsViewController.m */,
 				F05D821A1A6DBC9800416740 /* WallofFame.h */,
 				F05D821B1A6DBC9800416740 /* WallofFame.m */,
 				F08240371A187FD500A2EB36 /* BorderMan.m */,
@@ -271,15 +276,15 @@
 			files = (
 				F0171E691A6CE2B6003C9703 /* high_score_logo.gif in Resources */,
 				F05D820F1A6D8CE700416740 /* 120218TryAgain.png in Resources */,
-				F0ABE0191A24083F00242E8C /* SOUND8.WAV in Resources */,
 				F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */,
+				F04E7D1E1A6DFD1900EA838A /* gameover.png in Resources */,
 				F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */,
-				F0ABE0151A23FADC00242E8C /* SOUND136.WAV in Resources */,
+				F0ABE0151A23FADC00242E8C /* start.WAV in Resources */,
 				F0F36DF31A356E1100707037 /* mariomushroom1up_vectorized.png in Resources */,
 				F05D82161A6DA3E900416740 /* Main.storyboard in Resources */,
 				F03272021A2E5A79000C6FFB /* bomb12.png in Resources */,
-				F0BBE6121A2E72230027B8C0 /* song.mp3 in Resources */,
 				F04504F41A35607500B63718 /* bomb.mp3 in Resources */,
+				F04E7D1A1A6DF87B00EA838A /* slip.mp3 in Resources */,
 				F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */,
 				F0D536851A255E7700DD5957 /* SOUND7.WAV in Resources */,
 				F05D82121A6D949A00416740 /* chomp.mp3 in Resources */,
@@ -303,6 +308,7 @@
 				F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */,
 				F034D25F1A0AE94600CCF238 /* ViewController.m in Sources */,
 				F05D821C1A6DBC9800416740 /* WallofFame.m in Sources */,
+				F088FFDA1A6EF4DB00A9D3E1 /* SettingsViewController.m in Sources */,
 				F08240381A187FD500A2EB36 /* BorderMan.m in Sources */,
 				F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */,
 				F034D25C1A0AE94600CCF238 /* AppDelegate.m in Sources */,
@@ -418,6 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,6 +437,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

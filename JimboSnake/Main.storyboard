@@ -174,11 +174,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="NDb-ne-rza">
-                                <rect key="frame" x="82" y="138" width="155" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="NDb-ne-rza">
+                                <rect key="frame" x="80" y="211" width="150" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Game Over">
+                                <state key="normal" image="gameover.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -187,20 +186,21 @@
                                     <segue destination="y8e-cY-hws" kind="modal" id="uq4-hj-NrQ"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="120218TryAgain.png" id="eNk-nN-Mrz">
-                                <rect key="frame" x="102" y="228" width="116" height="111"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="RXz-MV-WxM">
+                                <rect key="frame" x="77" y="205" width="157" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
+                                <state key="normal" title="Button" image="120218TryAgain.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nzo-iw-Zzk" appends="YES" id="oVz-oy-itM"/>
+                                    <action selector="tryAgainButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t1S-wK-Rcs"/>
                                 </connections>
-                            </imageView>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mGR-Vp-LSy"/>
                     <keyCommands/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="extraLife1" destination="s1e-4S-65i" id="h6g-bZ-pEi"/>
                         <outlet property="food" destination="wxw-xs-lGA" id="buz-y0-RpV"/>
@@ -232,7 +232,7 @@
                         <outlet property="snakeSwipedLeft" destination="e0z-Kb-Ury" id="m2T-H2-TYE"/>
                         <outlet property="snakeSwipedRight" destination="DR0-BR-XyK" id="8if-RF-fDA"/>
                         <outlet property="snakeSwipedUp" destination="0aR-p6-qPm" id="wqE-nn-Nru"/>
-                        <outlet property="tryAgainButton" destination="eNk-nN-Mrz" id="Y3s-NO-5vG"/>
+                        <outlet property="tryAgainButton" destination="RXz-MV-WxM" id="Bj1-6a-BIx"/>
                     </connections>
                 </viewController>
                 <swipeGestureRecognizer direction="down" id="E0z-od-0e6"/>
@@ -307,10 +307,6 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="JDw-0e-Sqo"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snakeIconScreen.png" id="8eB-a3-Mis">
-                                <rect key="frame" x="35" y="103" width="217" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bomb12.png" id="rkz-uT-9XT">
                                 <rect key="frame" x="173" y="418" width="110" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -329,6 +325,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snakeIconScreen.png" id="8eB-a3-Mis">
+                                <rect key="frame" x="35" y="111" width="217" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -342,6 +342,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNP-gc-cuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-105" y="727"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="3nZ-cd-U1T">
+            <objects>
+                <viewController id="ggH-Ks-3IN" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="djI-T4-GXs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" id="y5w-3F-hpr">
+                                <rect key="frame" x="156" y="59" width="136" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snakeIconScreen.png" id="KF1-Xx-yU2">
+                                <rect key="frame" x="9" y="28" width="126" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="dqL-5T-e9c">
+                                <rect key="frame" x="227" y="178" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="musicSwitch:" destination="ggH-Ks-3IN" eventType="valueChanged" id="M1c-Z9-dGr"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Music:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c2d-x7-7es">
+                                <rect key="frame" x="54" y="183" width="153" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="LRQ-1p-6Cb">
+                                <rect key="frame" x="72" y="278" width="177" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Board Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="awh-AO-JGd">
+                                <rect key="frame" x="91" y="238" width="152" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="dcX-Sn-N4M">
+                                <rect key="frame" x="114" y="473" width="92" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="ggH-Ks-3IN" eventType="touchUpInside" id="E9w-rk-TD0"/>
+                                    <segue destination="y8e-cY-hws" kind="modal" id="Cs1-X1-hzG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorPicker" destination="LRQ-1p-6Cb" id="qTV-lo-KjH"/>
+                        <outlet property="musicSwitchOutlet" destination="dqL-5T-e9c" id="wO4-WM-O65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLR-0o-Ch8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="985"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Cre-aO-Mn8">
@@ -561,6 +629,7 @@
     <resources>
         <image name="120218TryAgain.png" width="300" height="300"/>
         <image name="bomb12.png" width="64" height="64"/>
+        <image name="gameover.png" width="202" height="202"/>
         <image name="high_score_logo.gif" width="269" height="176"/>
         <image name="mariomushroom1up_vectorized.png" width="624" height="794"/>
         <image name="snakeIconScreen.png" width="120" height="120"/>
@@ -571,7 +640,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="VkC-pf-0US"/>
-        <segue reference="reu-oI-WtC"/>
+        <segue reference="Cs1-X1-hzG"/>
+        <segue reference="cMc-FT-Ykw"/>
     </inferredMetricsTieBreakers>
 </document>

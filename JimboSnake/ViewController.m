@@ -36,7 +36,7 @@ CGFloat initialExtraLifeY;
     self.gameOverSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLGameOverSound error:nil];
     [self.gameOverSoundPlayer prepareToPlay];
     
-    NSString *filePathButtonPressedSound = [[NSBundle mainBundle] pathForResource:@"SOUND8"ofType:@"WAV"];
+    NSString *filePathButtonPressedSound = [[NSBundle mainBundle] pathForResource:@"slip"ofType:@"mp3"];
     NSURL *fileURLButtonPressedSound  = [NSURL fileURLWithPath:filePathButtonPressedSound ];
     self.directionPressedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLButtonPressedSound  error:nil];
     [self.directionPressedPlayer prepareToPlay];
@@ -396,8 +396,6 @@ CGFloat initialExtraLifeY;
 }
 
 
-
-
 -(void)loser{
     // lose a life
     lives--;
@@ -622,37 +620,6 @@ CGFloat initialExtraLifeY;
 }
 
 
-- (IBAction)tryAgainButtonTapped:(UITapGestureRecognizer *)sender {
-    
-    // reposition snake back to intial point
-    _snakeBlock.center = CGPointMake(initialSnakeX, initialSnakeY);
-       _snakeBlock2.center = CGPointMake(_snakeBlock.center.x, _snakeBlock.center.y);
-      _snakeBlock3.center = CGPointMake(_snakeBlock2.center.x, _snakeBlock2.center.y);
-     _snakeBlock4.center = CGPointMake(_snakeBlock3.center.x, _snakeBlock3.center.y);
-    _snakeBlock5.center = CGPointMake(_snakeBlock4.center.x, _snakeBlock4.center.y);
-     _snakeBlock6.center = CGPointMake(_snakeBlock5.center.x, _snakeBlock5.center.y);
-    _snakeBlock7.center = CGPointMake(_snakeBlock6.center.x, _snakeBlock6.center.y);
-       _snakeBlock8.center = CGPointMake(_snakeBlock7.center.x, _snakeBlock7.center.y);
-    _snakeBlock9.center = CGPointMake(_snakeBlock8.center.x, _snakeBlock8.center.y);
-      _snakeBlock10.center = CGPointMake(_snakeBlock9.center.x, _snakeBlock9.center.y);
-    _snakeBlock11.center = CGPointMake(_snakeBlock10.center.x, _snakeBlock10.center.y);
- _snakeBlock12.center = CGPointMake(_snakeBlock11.center.x, _snakeBlock11.center.y);
-     _snakeBlock13.center = CGPointMake(_snakeBlock12.center.x, _snakeBlock12.center.y);
-        _snakeBlock14.center = CGPointMake(_snakeBlock13.center.x, _snakeBlock13.center.y);
-     _snakeBlock15.center = CGPointMake(_snakeBlock14.center.x,_snakeBlock14.center.y);
-      _snakeBlock16.center = CGPointMake(_snakeBlock15.center.x, _snakeBlock15.center.y);
-        _snakeBlock17.center = CGPointMake(_snakeBlock16.center.x, _snakeBlock16.center.y);
-        _snakeBlock18.center = CGPointMake(_snakeBlock17.center.x, _snakeBlock17.center.y);
-        _snakeBlock19.center = CGPointMake(_snakeBlock18.center.x, _snakeBlock18.center.y);
-        _snakeBlock20.center = CGPointMake(_snakeBlock19.center.x, _snakeBlock19.center.y);
-    
-    
-    // restart timer
-    [self startTimer];
-    _tryAgainButton.hidden = YES;
-    
-
-}
 - (IBAction)gameOverButtonPressed:(UIButton *)sender {
     // play sound
     self.directionPressedPlayer.currentTime = 0;
@@ -661,5 +628,35 @@ CGFloat initialExtraLifeY;
 }
 
 
+- (IBAction)tryAgainButtonPressed:(UIButton *)sender {
+    
+    // reposition snake back to intial point
+    _snakeBlock.center = CGPointMake(initialSnakeX, initialSnakeY);
+    _snakeBlock2.center = CGPointMake(_snakeBlock.center.x, _snakeBlock.center.y);
+    _snakeBlock3.center = CGPointMake(_snakeBlock2.center.x, _snakeBlock2.center.y);
+    _snakeBlock4.center = CGPointMake(_snakeBlock3.center.x, _snakeBlock3.center.y);
+    _snakeBlock5.center = CGPointMake(_snakeBlock4.center.x, _snakeBlock4.center.y);
+    _snakeBlock6.center = CGPointMake(_snakeBlock5.center.x, _snakeBlock5.center.y);
+    _snakeBlock7.center = CGPointMake(_snakeBlock6.center.x, _snakeBlock6.center.y);
+    _snakeBlock8.center = CGPointMake(_snakeBlock7.center.x, _snakeBlock7.center.y);
+    _snakeBlock9.center = CGPointMake(_snakeBlock8.center.x, _snakeBlock8.center.y);
+    _snakeBlock10.center = CGPointMake(_snakeBlock9.center.x, _snakeBlock9.center.y);
+    _snakeBlock11.center = CGPointMake(_snakeBlock10.center.x, _snakeBlock10.center.y);
+    _snakeBlock12.center = CGPointMake(_snakeBlock11.center.x, _snakeBlock11.center.y);
+    _snakeBlock13.center = CGPointMake(_snakeBlock12.center.x, _snakeBlock12.center.y);
+    _snakeBlock14.center = CGPointMake(_snakeBlock13.center.x, _snakeBlock13.center.y);
+    _snakeBlock15.center = CGPointMake(_snakeBlock14.center.x,_snakeBlock14.center.y);
+    _snakeBlock16.center = CGPointMake(_snakeBlock15.center.x, _snakeBlock15.center.y);
+    _snakeBlock17.center = CGPointMake(_snakeBlock16.center.x, _snakeBlock16.center.y);
+    _snakeBlock18.center = CGPointMake(_snakeBlock17.center.x, _snakeBlock17.center.y);
+    _snakeBlock19.center = CGPointMake(_snakeBlock18.center.x, _snakeBlock18.center.y);
+    _snakeBlock20.center = CGPointMake(_snakeBlock19.center.x, _snakeBlock19.center.y);
+    
+    
+    // restart timer
+    [self startTimer];
+    _tryAgainButton.hidden = YES;
+    
+}
 @end
 
