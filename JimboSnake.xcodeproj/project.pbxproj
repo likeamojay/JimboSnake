@@ -27,6 +27,7 @@
 		F05D821C1A6DBC9800416740 /* WallofFame.m in Sources */ = {isa = PBXBuildFile; fileRef = F05D821B1A6DBC9800416740 /* WallofFame.m */; };
 		F08240381A187FD500A2EB36 /* BorderMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F08240371A187FD500A2EB36 /* BorderMan.m */; };
 		F088FFDA1A6EF4DB00A9D3E1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F088FFD91A6EF4DB00A9D3E1 /* SettingsViewController.m */; };
+		F088FFDC1A6F35A900A9D3E1 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F088FFDB1A6F35A900A9D3E1 /* music.mp3 */; };
 		F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F096F2CB1A1827A100C3D868 /* DBMan.m */; };
 		F096F2D41A18449500C3D868 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F096F2D31A18449500C3D868 /* libsqlite3.dylib */; };
 		F0ABE0151A23FADC00242E8C /* start.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* start.WAV */; };
@@ -77,6 +78,7 @@
 		F08240371A187FD500A2EB36 /* BorderMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderMan.m; sourceTree = "<group>"; };
 		F088FFD81A6EF4DB00A9D3E1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		F088FFD91A6EF4DB00A9D3E1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		F088FFDB1A6F35A900A9D3E1 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		F096F2CA1A1827A100C3D868 /* DBMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMan.h; sourceTree = "<group>"; };
 		F096F2CB1A1827A100C3D868 /* DBMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMan.m; sourceTree = "<group>"; };
 		F096F2D31A18449500C3D868 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -142,6 +144,7 @@
 				F0171E681A6CE2B6003C9703 /* high_score_logo.gif */,
 				F04504F31A35607500B63718 /* bomb.mp3 */,
 				F05D82111A6D949A00416740 /* chomp.mp3 */,
+				F088FFDB1A6F35A900A9D3E1 /* music.mp3 */,
 				F04E7D1D1A6DFD1900EA838A /* gameover.png */,
 				F0D536841A255E7700DD5957 /* SOUND7.WAV */,
 				F04E7D191A6DF87B00EA838A /* slip.mp3 */,
@@ -285,6 +288,7 @@
 				F03272021A2E5A79000C6FFB /* bomb12.png in Resources */,
 				F04504F41A35607500B63718 /* bomb.mp3 in Resources */,
 				F04E7D1A1A6DF87B00EA838A /* slip.mp3 in Resources */,
+				F088FFDC1A6F35A900A9D3E1 /* music.mp3 in Resources */,
 				F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */,
 				F0D536851A255E7700DD5957 /* SOUND7.WAV in Resources */,
 				F05D82121A6D949A00416740 /* chomp.mp3 in Resources */,

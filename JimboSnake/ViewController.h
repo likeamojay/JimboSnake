@@ -60,7 +60,7 @@ BOOL snakeBlock18in;
 BOOL snakeBlock19in;
 BOOL snakeBlock20in;
 
-@interface ViewController : UIViewController <UIAlertViewDelegate>
+@interface ViewController : UIViewController 
 
 
 //Sound effects
@@ -68,14 +68,18 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) AVAudioPlayer *gameOverSoundPlayer;
 @property (strong, nonatomic) AVAudioPlayer *snakeCrashedPlayer;
 @property (strong, nonatomic) AVAudioPlayer *snakeEatPlayer;
+@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
+
 
 
 // labels for current score, lives, and level
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *livesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
-
 @property (strong, nonatomic) IBOutlet UIButton *gameOverButton;
+
+// Manager for user settings
+@property (strong,nonatomic) NSUserDefaults *settings;
 
 
 // Listeners for swipe

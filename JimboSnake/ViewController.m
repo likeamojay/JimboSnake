@@ -46,6 +46,52 @@ CGFloat initialExtraLifeY;
     self.snakeEatPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSnakeEat  error:nil];
     [self.snakeEatPlayer prepareToPlay];
     
+    // Load and apply user settings
+    _settings = [NSUserDefaults standardUserDefaults];
+    
+    // Background color
+    NSString *theColor= [_settings objectForKey:@"background"];
+    if([theColor isEqualToString:@"blue"] == YES)
+    {
+        self.view.backgroundColor = [UIColor blueColor];
+    }
+    else if([theColor isEqualToString:@"green"] == YES)
+    {
+        self.view.backgroundColor = [UIColor greenColor];
+    }
+    else if([theColor isEqualToString:@"red"] == YES)
+    {
+        self.view.backgroundColor = [UIColor redColor];
+    }
+    else if([theColor isEqualToString:@"yellow"] == YES)
+    {
+        self.view.backgroundColor = [UIColor yellowColor];
+    }
+    else if([theColor isEqualToString:@"orange"] == YES)
+    {
+        self.view.backgroundColor = [UIColor orangeColor];
+    }
+    else
+    {
+        NSLog(@"The NSUserDefaults Dictionary has something in it that shouldn't be there");
+ 
+    }
+    
+    
+    
+    // background music
+    BOOL musicOn = [[_settings objectForKey:@"music"] boolValue];
+    if(musicOn == YES)
+    {
+        NSString *filePathMusic = [[NSBundle mainBundle] pathForResource:@"music"ofType:@"mp3"];
+        NSURL *fileURLMusic = [NSURL fileURLWithPath:filePathMusic ];
+        self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLMusic  error:nil];
+        [self.musicPlayer prepareToPlay];
+        [self.musicPlayer setCurrentTime:1];
+        [self.musicPlayer play];
+    }
+    
+    
     
     // load view and hide back button
     [super viewDidLoad];
@@ -432,57 +478,12 @@ CGFloat initialExtraLifeY;
     // game over sound
     self.gameOverSoundPlayer.currentTime = 0;
     [self.gameOverSoundPlayer play];
-    
-    // current high score
-    int currentHighScore = (int)[[DBMan getSharedInstance]getHighestScore].integerValue;
+ 
     
     // Save Score in database
     [[DBMan getSharedInstance]saveData:[NSString stringWithFormat:@"%2d",theScore]];
-    
-    // if latest high score in database is less than this one
-    if(currentHighScore < theScore)
-    {
-        // alert for new score
-        _HighScoreNote = [[UIAlertView alloc] initWithTitle:@"You made a new high score!" message:@"Enter your name to be in the Wall of Fame" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
-        _HighScoreNote.alertViewStyle = UIAlertViewStylePlainTextInput;
-        [[_HighScoreNote textFieldAtIndex:0] setPlaceholder:@"Your Name Here"];
-        [_HighScoreNote show];
-       
-    }
-    
 }
 
-// close alert if save button is pressed
-- (void)dismissAlert
-{
-    [self.HighScoreNote dismissWithClickedButtonIndex:0 animated:YES];
-}
-
-//
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    NSMutableString *theNameAndScore = [NSMutableString stringWithFormat:@"%2d",theScore];
-    
-    if (buttonIndex == 1) {
-         NSLog(@"Save button pressed");
-        
-        // Get the player's name
-        _nameTextField = [alertView textFieldAtIndex:0];
-        [theNameAndScore appendString:@" "];
-        [theNameAndScore appendString:_nameTextField.text];
-        NSLog(@"%@",theNameAndScore);
-   
-        // Send players name over to WallofFameViewController to be put in the table
-        [[WallofFame getSharedInstance] newScore:(theNameAndScore)];
-      
-    }
-    // Reset lives back to 5
-    lives = 5;
-    // Reset level back to 1
-    level = 1;
-    // Reset score to 0
-    theScore = 0;
-}
 
 
 -(void)updateScore

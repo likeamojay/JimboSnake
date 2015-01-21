@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UIPickerViewDelegate,UIPickerViewDataSource>
 
 
 
 - (IBAction)saveButtonPressed:(UIButton *)sender;
-- (IBAction)musicSwitch:(UISwitch *)sender;
+- (void)stateChanged:(UISwitch *)switchState;
+
+@property (strong,nonatomic) NSUserDefaults *settings;
 @property (strong, nonatomic) IBOutlet UISwitch *musicSwitchOutlet;
-
-
 @property (strong, nonatomic) IBOutlet UIPickerView *colorPicker;
+@property (strong, nonatomic) NSArray *colorPickerData;
 
 @end
