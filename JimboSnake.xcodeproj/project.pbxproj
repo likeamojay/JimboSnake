@@ -32,6 +32,11 @@
 		F0975DC91A70B44800063F29 /* back_blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DC81A70B44800063F29 /* back_blue_button.png */; };
 		F0975DCB1A70B55500063F29 /* VectorToons-Food-012_vectorized.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DCA1A70B55500063F29 /* VectorToons-Food-012_vectorized.png */; };
 		F0975DD11A70BA5000063F29 /* snake_head.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DD01A70BA5000063F29 /* snake_head.png */; };
+		F0975DD31A70BC7C00063F29 /* snake_segment_base.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DD21A70BC7C00063F29 /* snake_segment_base.png */; };
+		F0975DE71A70C5F600063F29 /* san_francisco_4_inch.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DE61A70C5F600063F29 /* san_francisco_4_inch.png */; };
+		F0975DE91A70CE0900063F29 /* housefly-155460_640.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DE81A70CE0900063F29 /* housefly-155460_640.png */; };
+		F0975DEC1A70CF1700063F29 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DEA1A70CF1700063F29 /* left_arrow.png */; };
+		F0975DED1A70CF1700063F29 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DEB1A70CF1700063F29 /* right_arrow.png */; };
 		F0ABE0151A23FADC00242E8C /* start.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* start.WAV */; };
 		F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE01A1A24084D00242E8C /* SOUND3.WAV */; };
 		F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */; };
@@ -88,6 +93,11 @@
 		F0975DC81A70B44800063F29 /* back_blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_blue_button.png; sourceTree = "<group>"; };
 		F0975DCA1A70B55500063F29 /* VectorToons-Food-012_vectorized.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VectorToons-Food-012_vectorized.png"; sourceTree = "<group>"; };
 		F0975DD01A70BA5000063F29 /* snake_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake_head.png; sourceTree = "<group>"; };
+		F0975DD21A70BC7C00063F29 /* snake_segment_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake_segment_base.png; sourceTree = "<group>"; };
+		F0975DE61A70C5F600063F29 /* san_francisco_4_inch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = san_francisco_4_inch.png; sourceTree = "<group>"; };
+		F0975DE81A70CE0900063F29 /* housefly-155460_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "housefly-155460_640.png"; sourceTree = "<group>"; };
+		F0975DEA1A70CF1700063F29 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
+		F0975DEB1A70CF1700063F29 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
 		F0ABE0141A23FADC00242E8C /* start.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.WAV; sourceTree = "<group>"; };
 		F0ABE01A1A24084D00242E8C /* SOUND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND3.WAV; sourceTree = "<group>"; };
 		F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snakeIconScreen.png; sourceTree = "<group>"; };
@@ -150,11 +160,16 @@
 				F05D820E1A6D8CE700416740 /* 120218TryAgain.png */,
 				F0F36DF21A356E1100707037 /* mariomushroom1up_vectorized.png */,
 				F0975DD01A70BA5000063F29 /* snake_head.png */,
+				F0975DD21A70BC7C00063F29 /* snake_segment_base.png */,
 				F0171E681A6CE2B6003C9703 /* high_score_logo.gif */,
 				F04504F31A35607500B63718 /* bomb.mp3 */,
 				F0DBE5361A70AEB9005EB539 /* peek.mp3 */,
+				F0975DEA1A70CF1700063F29 /* left_arrow.png */,
+				F0975DEB1A70CF1700063F29 /* right_arrow.png */,
+				F0975DE61A70C5F600063F29 /* san_francisco_4_inch.png */,
 				F0DBE5341A70AE45005EB539 /* crash.mp3 */,
 				F05D82111A6D949A00416740 /* chomp.mp3 */,
+				F0975DE81A70CE0900063F29 /* housefly-155460_640.png */,
 				F0DBE5321A70ACDB005EB539 /* slip.mp3 */,
 				F0975DC81A70B44800063F29 /* back_blue_button.png */,
 				F088FFDB1A6F35A900A9D3E1 /* music.mp3 */,
@@ -289,7 +304,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0975DE71A70C5F600063F29 /* san_francisco_4_inch.png in Resources */,
 				F0171E691A6CE2B6003C9703 /* high_score_logo.gif in Resources */,
+				F0975DED1A70CF1700063F29 /* right_arrow.png in Resources */,
+				F0975DE91A70CE0900063F29 /* housefly-155460_640.png in Resources */,
 				F05D820F1A6D8CE700416740 /* 120218TryAgain.png in Resources */,
 				F0975DC91A70B44800063F29 /* back_blue_button.png in Resources */,
 				F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */,
@@ -299,7 +317,9 @@
 				F0975DD11A70BA5000063F29 /* snake_head.png in Resources */,
 				F0F36DF31A356E1100707037 /* mariomushroom1up_vectorized.png in Resources */,
 				F05D82161A6DA3E900416740 /* Main.storyboard in Resources */,
+				F0975DEC1A70CF1700063F29 /* left_arrow.png in Resources */,
 				F0975DCB1A70B55500063F29 /* VectorToons-Food-012_vectorized.png in Resources */,
+				F0975DD31A70BC7C00063F29 /* snake_segment_base.png in Resources */,
 				F03272021A2E5A79000C6FFB /* bomb12.png in Resources */,
 				F04504F41A35607500B63718 /* bomb.mp3 in Resources */,
 				F088FFDC1A6F35A900A9D3E1 /* music.mp3 in Resources */,

@@ -18,6 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // sound effects
+    NSString *filePathSqueeze = [[NSBundle mainBundle] pathForResource:@"slip"ofType:@"mp3"];
+    NSURL *fileURLSqueeze = [NSURL fileURLWithPath:filePathSqueeze ];
+    self.squeezeButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSqueeze  error:nil];
+    [self.squeezeButtonPlayer prepareToPlay];
+    
+    NSString *filePathPeek = [[NSBundle mainBundle] pathForResource:@"peek"ofType:@"mp3"];
+    NSURL *fileURLPeek = [NSURL fileURLWithPath:filePathPeek ];
+    self.peekButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLPeek  error:nil];
+    [self.peekButtonPlayer prepareToPlay];
+    
+    // set background
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"san_francisco_4_inch.png"]]];
     
     // NSUserDefaults settings
     _settings = [NSUserDefaults standardUserDefaults];
@@ -27,41 +40,14 @@
     [self.musicSwitchOutlet addTarget:self action:@selector(stateChanged:) forControlEvents:(UIControlEventValueChanged)];
     
     //prepare picker
-    _colorPickerData = @[@"Blue",@"Green",@"Red",@"Yellow",@"Orange"];
+    _colorPickerData = @[@"Bright Green",@"Blue",@"Retro Green (Default)",@"Red",@"Yellow",@"Orange"];
     self.colorPicker.dataSource = self;
     self.colorPicker.delegate = self;
     
-     NSString *theColor= [_settings objectForKey:@"background"];
     
-    if([theColor isEqualToString:@"blue"] == YES)
-    {
-        [_colorPicker selectRow:0 inComponent:0 animated:YES];
-    }
-    else if([theColor isEqualToString:@"green"] == YES)
-    {
-        [_colorPicker selectRow:1 inComponent:0 animated:YES];
-
-    }
-    else if([theColor isEqualToString:@"red"] == YES)
-    {
-        [_colorPicker selectRow:2 inComponent:0 animated:YES];
-
-    }
-    else if([theColor isEqualToString:@"yellow"] == YES)
-    {
-        [_colorPicker selectRow:3 inComponent:0 animated:YES];
-
-    }
-    else if([theColor isEqualToString:@"orange"] == YES)
-    {
-        [_colorPicker selectRow:4 inComponent:0 animated:YES];
-
-    }
-    else
-    {
-        NSLog(@"The NSUserDefaults Dictionary has something in it that shouldn't be there");
-        
-    }
+    // set default to retro greeen
+    [_settings setObject:@"retroGreen" forKey:@"background"];
+    [_colorPicker selectRow:2 inComponent:0 animated:YES];
     
 }
     
@@ -84,14 +70,16 @@
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
     if(row == 0)
-    { [_settings setObject:@"blue"forKey:@"background"]; }
-    if(row == 1)
     { [_settings setObject:@"green"forKey:@"background"]; }
+    if(row == 1)
+    { [_settings setObject:@"blue"forKey:@"background"]; }
     if(row == 2)
-    { [_settings setObject:@"red"forKey:@"background"]; }
+    { [_settings setObject:@"retroGreen"forKey:@"background"]; }
     if(row == 3)
-    { [_settings setObject:@"yellow"forKey:@"background"]; }
+    { [_settings setObject:@"red"forKey:@"background"]; }
     if(row == 4)
+    { [_settings setObject:@"yellow"forKey:@"background"]; }
+    if(row == 5)
     { [_settings setObject:@"orange"forKey:@"background"]; }
 }
 
@@ -111,6 +99,8 @@
 // save data and exit
 - (IBAction)saveButtonPressed:(UIButton *)sender {
     
+    [self.peekButtonPlayer setCurrentTime:0.4];
+    [self.peekButtonPlayer play];
     [_settings synchronize];
 }
 
@@ -126,6 +116,9 @@
     {
     [_settings setObject:[NSNumber numberWithBool:(NO)] forKey:@"music"];
     }
+    
+    [self.squeezeButtonPlayer play];
+    
 }
 
 

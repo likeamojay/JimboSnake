@@ -19,6 +19,11 @@
     
     [super viewDidLoad];
     
+    
+    // set background
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"san_francisco_4_inch.png"]]];
+    
+    // Load DB
     [[DBMan getSharedInstance]createDB];
     
     // hide bomb icon

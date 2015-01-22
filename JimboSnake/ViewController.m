@@ -52,7 +52,11 @@ CGFloat initialExtraLifeY;
     
     // Background color
     NSString *theColor= [_settings objectForKey:@"background"];
-    if([theColor isEqualToString:@"blue"] == YES)
+    if([theColor isEqualToString:@"retroGreen"] == YES)
+    {
+        self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.1 alpha:1.0];
+    }
+    else if([theColor isEqualToString:@"blue"] == YES)
     {
         self.view.backgroundColor = [UIColor blueColor];
     }
@@ -84,12 +88,17 @@ CGFloat initialExtraLifeY;
     BOOL musicOn = [[_settings objectForKey:@"music"] boolValue];
     if(musicOn == YES)
     {
-        NSString *filePathMusic = [[NSBundle mainBundle] pathForResource:@"music"ofType:@"mp3"];
-        NSURL *fileURLMusic = [NSURL fileURLWithPath:filePathMusic ];
-        self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLMusic  error:nil];
-        [self.musicPlayer prepareToPlay];
-        [self.musicPlayer setCurrentTime:1];
-        [self.musicPlayer play];
+        // if it's not already playing
+        if([self.musicPlayer isPlaying] == NO)
+        {
+            NSString *filePathMusic = [[NSBundle mainBundle] pathForResource:@"music"ofType:@"mp3"];
+            NSURL *fileURLMusic = [NSURL fileURLWithPath:filePathMusic ];
+            self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLMusic  error:nil];
+            [self.musicPlayer prepareToPlay];
+            [self.musicPlayer setCurrentTime:1];
+            [self.musicPlayer play];
+        }
+       
     }
     
     
