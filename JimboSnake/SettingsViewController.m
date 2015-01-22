@@ -31,6 +31,38 @@
     self.colorPicker.dataSource = self;
     self.colorPicker.delegate = self;
     
+     NSString *theColor= [_settings objectForKey:@"background"];
+    
+    if([theColor isEqualToString:@"blue"] == YES)
+    {
+        [_colorPicker selectRow:0 inComponent:0 animated:YES];
+    }
+    else if([theColor isEqualToString:@"green"] == YES)
+    {
+        [_colorPicker selectRow:1 inComponent:0 animated:YES];
+
+    }
+    else if([theColor isEqualToString:@"red"] == YES)
+    {
+        [_colorPicker selectRow:2 inComponent:0 animated:YES];
+
+    }
+    else if([theColor isEqualToString:@"yellow"] == YES)
+    {
+        [_colorPicker selectRow:3 inComponent:0 animated:YES];
+
+    }
+    else if([theColor isEqualToString:@"orange"] == YES)
+    {
+        [_colorPicker selectRow:4 inComponent:0 animated:YES];
+
+    }
+    else
+    {
+        NSLog(@"The NSUserDefaults Dictionary has something in it that shouldn't be there");
+        
+    }
+    
 }
     
     
@@ -61,11 +93,6 @@
     { [_settings setObject:@"yellow"forKey:@"background"]; }
     if(row == 4)
     { [_settings setObject:@"orange"forKey:@"background"]; }
-    
-    
-    
-    
-    
 }
 
 
@@ -97,7 +124,7 @@
     }
     else
     {
-        [_settings setObject:[NSNumber numberWithBool:(NO)] forKey:@"music"];
+    [_settings setObject:[NSNumber numberWithBool:(NO)] forKey:@"music"];
     }
 }
 

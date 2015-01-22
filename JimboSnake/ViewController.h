@@ -10,9 +10,6 @@
 #import "DBMan.h"
 #import <AVFoundation/AVFoundation.h>
 
-
-
-
 // position for snake
 int xpos;
 int ypos;
