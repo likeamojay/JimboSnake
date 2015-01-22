@@ -26,13 +26,13 @@ CGFloat initialExtraLifeY;
 - (void)viewDidLoad {
     
     //Initialize sound effects
-    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"crash"ofType:@"mp3"];
+    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"crash2"ofType:@"mp3"];
     NSURL *fileURLCrashSound = [NSURL fileURLWithPath:filePathCrashSound];
     self.snakeCrashedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLCrashSound error:nil];
     [self.snakeCrashedPlayer prepareToPlay];
     
     
-    NSString *filePathGameOverSound = [[NSBundle mainBundle] pathForResource:@"SOUND3"ofType:@"WAV"];
+    NSString *filePathGameOverSound = [[NSBundle mainBundle] pathForResource:@"crash"ofType:@"mp3"];
     NSURL *fileURLGameOverSound = [NSURL fileURLWithPath:filePathGameOverSound];
     self.gameOverSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLGameOverSound error:nil];
     [self.gameOverSoundPlayer prepareToPlay];
@@ -461,7 +461,7 @@ CGFloat initialExtraLifeY;
     if(lives > 0)
     {
         //crash sound
-        self.snakeCrashedPlayer.currentTime = 0.7;
+        self.snakeCrashedPlayer.currentTime = 0;
         [self.snakeCrashedPlayer play];
         [_snakeTimer invalidate];
         

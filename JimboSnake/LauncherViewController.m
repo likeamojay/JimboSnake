@@ -33,7 +33,7 @@
    _highestScoreLabel.text = [[DBMan getSharedInstance]getHighestScore];
     
     // start sound
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"start"ofType:@"WAV"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"start"ofType:@"mp3"];
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
     self.audioPlayer = [[AVAudioPlayer alloc]
                         initWithContentsOfURL:fileURL error:nil];

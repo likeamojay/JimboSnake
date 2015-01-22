@@ -37,8 +37,9 @@
 		F0975DE91A70CE0900063F29 /* housefly-155460_640.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DE81A70CE0900063F29 /* housefly-155460_640.png */; };
 		F0975DEC1A70CF1700063F29 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DEA1A70CF1700063F29 /* left_arrow.png */; };
 		F0975DED1A70CF1700063F29 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DEB1A70CF1700063F29 /* right_arrow.png */; };
-		F0ABE0151A23FADC00242E8C /* start.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* start.WAV */; };
-		F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE01A1A24084D00242E8C /* SOUND3.WAV */; };
+		F0975DEF1A70D1B200063F29 /* slip2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0975DEE1A70D1B200063F29 /* slip2.mp3 */; };
+		F0975DF11A70D25C00063F29 /* crash2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0975DF01A70D25C00063F29 /* crash2.mp3 */; };
+		F0975DF31A70D3BC00063F29 /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0975DF21A70D3BC00063F29 /* start.mp3 */; };
 		F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */; };
 		F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C637F11A0ED91F005DA391 /* LauncherViewController.m */; };
 		F0DBE5331A70ACDB005EB539 /* slip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0DBE5321A70ACDB005EB539 /* slip.mp3 */; };
@@ -98,8 +99,9 @@
 		F0975DE81A70CE0900063F29 /* housefly-155460_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "housefly-155460_640.png"; sourceTree = "<group>"; };
 		F0975DEA1A70CF1700063F29 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
 		F0975DEB1A70CF1700063F29 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
-		F0ABE0141A23FADC00242E8C /* start.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.WAV; sourceTree = "<group>"; };
-		F0ABE01A1A24084D00242E8C /* SOUND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND3.WAV; sourceTree = "<group>"; };
+		F0975DEE1A70D1B200063F29 /* slip2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slip2.mp3; sourceTree = "<group>"; };
+		F0975DF01A70D25C00063F29 /* crash2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crash2.mp3; sourceTree = "<group>"; };
+		F0975DF21A70D3BC00063F29 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
 		F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snakeIconScreen.png; sourceTree = "<group>"; };
 		F0C637F01A0ED91F005DA391 /* LauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherViewController.h; sourceTree = "<group>"; };
 		F0C637F11A0ED91F005DA391 /* LauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewController.m; sourceTree = "<group>"; };
@@ -156,13 +158,14 @@
 				F096F2CA1A1827A100C3D868 /* DBMan.h */,
 				F096F2CB1A1827A100C3D868 /* DBMan.m */,
 				F0C637F01A0ED91F005DA391 /* LauncherViewController.h */,
-				F0ABE0141A23FADC00242E8C /* start.WAV */,
 				F05D820E1A6D8CE700416740 /* 120218TryAgain.png */,
 				F0F36DF21A356E1100707037 /* mariomushroom1up_vectorized.png */,
 				F0975DD01A70BA5000063F29 /* snake_head.png */,
 				F0975DD21A70BC7C00063F29 /* snake_segment_base.png */,
+				F0975DF01A70D25C00063F29 /* crash2.mp3 */,
 				F0171E681A6CE2B6003C9703 /* high_score_logo.gif */,
 				F04504F31A35607500B63718 /* bomb.mp3 */,
+				F0975DF21A70D3BC00063F29 /* start.mp3 */,
 				F0DBE5361A70AEB9005EB539 /* peek.mp3 */,
 				F0975DEA1A70CF1700063F29 /* left_arrow.png */,
 				F0975DEB1A70CF1700063F29 /* right_arrow.png */,
@@ -170,11 +173,11 @@
 				F0DBE5341A70AE45005EB539 /* crash.mp3 */,
 				F05D82111A6D949A00416740 /* chomp.mp3 */,
 				F0975DE81A70CE0900063F29 /* housefly-155460_640.png */,
+				F0975DEE1A70D1B200063F29 /* slip2.mp3 */,
 				F0DBE5321A70ACDB005EB539 /* slip.mp3 */,
 				F0975DC81A70B44800063F29 /* back_blue_button.png */,
 				F088FFDB1A6F35A900A9D3E1 /* music.mp3 */,
 				F04E7D1D1A6DFD1900EA838A /* gameover.png */,
-				F0ABE01A1A24084D00242E8C /* SOUND3.WAV */,
 				F03272011A2E5A79000C6FFB /* bomb12.png */,
 				F0C637F11A0ED91F005DA391 /* LauncherViewController.m */,
 				F08240361A187FD500A2EB36 /* BorderMan.h */,
@@ -305,21 +308,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0975DE71A70C5F600063F29 /* san_francisco_4_inch.png in Resources */,
+				F0975DEF1A70D1B200063F29 /* slip2.mp3 in Resources */,
 				F0171E691A6CE2B6003C9703 /* high_score_logo.gif in Resources */,
 				F0975DED1A70CF1700063F29 /* right_arrow.png in Resources */,
 				F0975DE91A70CE0900063F29 /* housefly-155460_640.png in Resources */,
 				F05D820F1A6D8CE700416740 /* 120218TryAgain.png in Resources */,
 				F0975DC91A70B44800063F29 /* back_blue_button.png in Resources */,
-				F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */,
 				F04E7D1E1A6DFD1900EA838A /* gameover.png in Resources */,
 				F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */,
-				F0ABE0151A23FADC00242E8C /* start.WAV in Resources */,
 				F0975DD11A70BA5000063F29 /* snake_head.png in Resources */,
 				F0F36DF31A356E1100707037 /* mariomushroom1up_vectorized.png in Resources */,
 				F05D82161A6DA3E900416740 /* Main.storyboard in Resources */,
+				F0975DF31A70D3BC00063F29 /* start.mp3 in Resources */,
 				F0975DEC1A70CF1700063F29 /* left_arrow.png in Resources */,
 				F0975DCB1A70B55500063F29 /* VectorToons-Food-012_vectorized.png in Resources */,
 				F0975DD31A70BC7C00063F29 /* snake_segment_base.png in Resources */,
+				F0975DF11A70D25C00063F29 /* crash2.mp3 in Resources */,
 				F03272021A2E5A79000C6FFB /* bomb12.png in Resources */,
 				F04504F41A35607500B63718 /* bomb.mp3 in Resources */,
 				F088FFDC1A6F35A900A9D3E1 /* music.mp3 in Resources */,

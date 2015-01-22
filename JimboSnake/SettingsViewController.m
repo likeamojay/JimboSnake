@@ -24,7 +24,7 @@
     self.squeezeButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSqueeze  error:nil];
     [self.squeezeButtonPlayer prepareToPlay];
     
-    NSString *filePathPeek = [[NSBundle mainBundle] pathForResource:@"peek"ofType:@"mp3"];
+    NSString *filePathPeek = [[NSBundle mainBundle] pathForResource:@"slip2"ofType:@"mp3"];
     NSURL *fileURLPeek = [NSURL fileURLWithPath:filePathPeek ];
     self.peekButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLPeek  error:nil];
     [self.peekButtonPlayer prepareToPlay];
