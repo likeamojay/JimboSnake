@@ -27,26 +27,25 @@
     // load highest score and place it on the screen
    _highestScoreLabel.text = [[DBMan getSharedInstance]getHighestScore];
     
-    
-    //Get the file path to the sound
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"start"
-                                                         ofType:@"WAV"];
-    
-    // Convert the file path to a URL object.
+    // start sound
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"start"ofType:@"WAV"];
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-    
-    //Initialize the AVAudioPlayer.
     self.audioPlayer = [[AVAudioPlayer alloc]
                         initWithContentsOfURL:fileURL error:nil];
-    
-    // Preloads the buffer and prepares the audio for playing.
     [self.audioPlayer prepareToPlay];
-    
-    
+
+    // clear sound
     NSString *fileClearButtonPlayer = [[NSBundle mainBundle] pathForResource:@"bomb"ofType:@"mp3"];
     NSURL *fileURLClearButtonPlayer   = [NSURL fileURLWithPath:fileClearButtonPlayer];
     self.clearButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLClearButtonPlayer   error:nil];
     [self.clearButtonPlayer  prepareToPlay];
+    
+    NSString *filePeekButtonPlayer = [[NSBundle mainBundle] pathForResource:@"peek"ofType:@"mp3"];
+    NSURL *fileURLPeekButtonPlayer   = [NSURL fileURLWithPath:filePeekButtonPlayer];
+    self.peekButtonPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLPeekButtonPlayer   error:nil];
+    [self.peekButtonPlayer  prepareToPlay];
+    
+    
    
  
 }
@@ -64,13 +63,24 @@
 }
 
 
-
+// boom sound when clearing scores
 -(void)Boom
 {
     _highestScoreLabel.hidden = NO;
     _bomb.hidden = YES;
 }
 
+
+- (IBAction)settingsButtonPressed:(UIButton *)sender {
+    
+    [self.peekButtonPlayer setCurrentTime:(0.4)];
+    [self.peekButtonPlayer play];
+}
+
+- (IBAction)howtoPlayButtonPressed:(UIButton *)sender {
+    [self.peekButtonPlayer setCurrentTime:(0.4)];
+     [self.peekButtonPlayer play];
+}
 
 - (IBAction)clearButtonPressed:(UIButton *)sender {
     

@@ -15,7 +15,6 @@
 		F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F034D2631A0AE94600CCF238 /* Images.xcassets */; };
 		F034D2731A0AE94600CCF238 /* JimboSnakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F034D2721A0AE94600CCF238 /* JimboSnakeTests.m */; };
 		F04504F41A35607500B63718 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04504F31A35607500B63718 /* bomb.mp3 */; };
-		F04E7D1A1A6DF87B00EA838A /* slip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F04E7D191A6DF87B00EA838A /* slip.mp3 */; };
 		F04E7D1E1A6DFD1900EA838A /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = F04E7D1D1A6DFD1900EA838A /* gameover.png */; };
 		F0530DAD1A3974A7005256CB /* DBManTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F0530DAC1A3974A7005256CB /* DBManTest.m */; };
 		F0530DAF1A397764005256CB /* LauncherViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F0530DAE1A397764005256CB /* LauncherViewControllerTest.m */; };
@@ -30,11 +29,16 @@
 		F088FFDC1A6F35A900A9D3E1 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F088FFDB1A6F35A900A9D3E1 /* music.mp3 */; };
 		F096F2CC1A1827A100C3D868 /* DBMan.m in Sources */ = {isa = PBXBuildFile; fileRef = F096F2CB1A1827A100C3D868 /* DBMan.m */; };
 		F096F2D41A18449500C3D868 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F096F2D31A18449500C3D868 /* libsqlite3.dylib */; };
+		F0975DC91A70B44800063F29 /* back_blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DC81A70B44800063F29 /* back_blue_button.png */; };
+		F0975DCB1A70B55500063F29 /* VectorToons-Food-012_vectorized.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DCA1A70B55500063F29 /* VectorToons-Food-012_vectorized.png */; };
+		F0975DD11A70BA5000063F29 /* snake_head.png in Resources */ = {isa = PBXBuildFile; fileRef = F0975DD01A70BA5000063F29 /* snake_head.png */; };
 		F0ABE0151A23FADC00242E8C /* start.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE0141A23FADC00242E8C /* start.WAV */; };
 		F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0ABE01A1A24084D00242E8C /* SOUND3.WAV */; };
 		F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */; };
 		F0C637F21A0ED91F005DA391 /* LauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C637F11A0ED91F005DA391 /* LauncherViewController.m */; };
-		F0D536851A255E7700DD5957 /* SOUND7.WAV in Resources */ = {isa = PBXBuildFile; fileRef = F0D536841A255E7700DD5957 /* SOUND7.WAV */; };
+		F0DBE5331A70ACDB005EB539 /* slip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0DBE5321A70ACDB005EB539 /* slip.mp3 */; };
+		F0DBE5351A70AE45005EB539 /* crash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0DBE5341A70AE45005EB539 /* crash.mp3 */; };
+		F0DBE5371A70AEB9005EB539 /* peek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F0DBE5361A70AEB9005EB539 /* peek.mp3 */; };
 		F0F36DF31A356E1100707037 /* mariomushroom1up_vectorized.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F36DF21A356E1100707037 /* mariomushroom1up_vectorized.png */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +67,6 @@
 		F034D2711A0AE94600CCF238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F034D2721A0AE94600CCF238 /* JimboSnakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JimboSnakeTests.m; sourceTree = "<group>"; };
 		F04504F31A35607500B63718 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
-		F04E7D191A6DF87B00EA838A /* slip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slip.mp3; sourceTree = "<group>"; };
 		F04E7D1D1A6DFD1900EA838A /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
 		F0530DAC1A3974A7005256CB /* DBManTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManTest.m; sourceTree = "<group>"; };
 		F0530DAE1A397764005256CB /* LauncherViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewControllerTest.m; sourceTree = "<group>"; };
@@ -82,12 +85,17 @@
 		F096F2CA1A1827A100C3D868 /* DBMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMan.h; sourceTree = "<group>"; };
 		F096F2CB1A1827A100C3D868 /* DBMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMan.m; sourceTree = "<group>"; };
 		F096F2D31A18449500C3D868 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F0975DC81A70B44800063F29 /* back_blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_blue_button.png; sourceTree = "<group>"; };
+		F0975DCA1A70B55500063F29 /* VectorToons-Food-012_vectorized.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VectorToons-Food-012_vectorized.png"; sourceTree = "<group>"; };
+		F0975DD01A70BA5000063F29 /* snake_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake_head.png; sourceTree = "<group>"; };
 		F0ABE0141A23FADC00242E8C /* start.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.WAV; sourceTree = "<group>"; };
 		F0ABE01A1A24084D00242E8C /* SOUND3.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND3.WAV; sourceTree = "<group>"; };
 		F0C37EBB1A1C3C0D00F98AED /* snakeIconScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snakeIconScreen.png; sourceTree = "<group>"; };
 		F0C637F01A0ED91F005DA391 /* LauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LauncherViewController.h; sourceTree = "<group>"; };
 		F0C637F11A0ED91F005DA391 /* LauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LauncherViewController.m; sourceTree = "<group>"; };
-		F0D536841A255E7700DD5957 /* SOUND7.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SOUND7.WAV; sourceTree = "<group>"; };
+		F0DBE5321A70ACDB005EB539 /* slip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slip.mp3; sourceTree = "<group>"; };
+		F0DBE5341A70AE45005EB539 /* crash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crash.mp3; sourceTree = "<group>"; };
+		F0DBE5361A70AEB9005EB539 /* peek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = peek.mp3; sourceTree = "<group>"; };
 		F0F36DF21A356E1100707037 /* mariomushroom1up_vectorized.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariomushroom1up_vectorized.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,13 +149,16 @@
 				F0ABE0141A23FADC00242E8C /* start.WAV */,
 				F05D820E1A6D8CE700416740 /* 120218TryAgain.png */,
 				F0F36DF21A356E1100707037 /* mariomushroom1up_vectorized.png */,
+				F0975DD01A70BA5000063F29 /* snake_head.png */,
 				F0171E681A6CE2B6003C9703 /* high_score_logo.gif */,
 				F04504F31A35607500B63718 /* bomb.mp3 */,
+				F0DBE5361A70AEB9005EB539 /* peek.mp3 */,
+				F0DBE5341A70AE45005EB539 /* crash.mp3 */,
 				F05D82111A6D949A00416740 /* chomp.mp3 */,
+				F0DBE5321A70ACDB005EB539 /* slip.mp3 */,
+				F0975DC81A70B44800063F29 /* back_blue_button.png */,
 				F088FFDB1A6F35A900A9D3E1 /* music.mp3 */,
 				F04E7D1D1A6DFD1900EA838A /* gameover.png */,
-				F0D536841A255E7700DD5957 /* SOUND7.WAV */,
-				F04E7D191A6DF87B00EA838A /* slip.mp3 */,
 				F0ABE01A1A24084D00242E8C /* SOUND3.WAV */,
 				F03272011A2E5A79000C6FFB /* bomb12.png */,
 				F0C637F11A0ED91F005DA391 /* LauncherViewController.m */,
@@ -156,6 +167,7 @@
 				F088FFD81A6EF4DB00A9D3E1 /* SettingsViewController.h */,
 				F088FFD91A6EF4DB00A9D3E1 /* SettingsViewController.m */,
 				F05D821A1A6DBC9800416740 /* WallofFame.h */,
+				F0975DCA1A70B55500063F29 /* VectorToons-Food-012_vectorized.png */,
 				F05D821B1A6DBC9800416740 /* WallofFame.m */,
 				F08240371A187FD500A2EB36 /* BorderMan.m */,
 				F034D25D1A0AE94600CCF238 /* ViewController.h */,
@@ -279,18 +291,22 @@
 			files = (
 				F0171E691A6CE2B6003C9703 /* high_score_logo.gif in Resources */,
 				F05D820F1A6D8CE700416740 /* 120218TryAgain.png in Resources */,
+				F0975DC91A70B44800063F29 /* back_blue_button.png in Resources */,
 				F0ABE01B1A24084D00242E8C /* SOUND3.WAV in Resources */,
 				F04E7D1E1A6DFD1900EA838A /* gameover.png in Resources */,
 				F0C37EBC1A1C3C0D00F98AED /* snakeIconScreen.png in Resources */,
 				F0ABE0151A23FADC00242E8C /* start.WAV in Resources */,
+				F0975DD11A70BA5000063F29 /* snake_head.png in Resources */,
 				F0F36DF31A356E1100707037 /* mariomushroom1up_vectorized.png in Resources */,
 				F05D82161A6DA3E900416740 /* Main.storyboard in Resources */,
+				F0975DCB1A70B55500063F29 /* VectorToons-Food-012_vectorized.png in Resources */,
 				F03272021A2E5A79000C6FFB /* bomb12.png in Resources */,
 				F04504F41A35607500B63718 /* bomb.mp3 in Resources */,
-				F04E7D1A1A6DF87B00EA838A /* slip.mp3 in Resources */,
 				F088FFDC1A6F35A900A9D3E1 /* music.mp3 in Resources */,
+				F0DBE5371A70AEB9005EB539 /* peek.mp3 in Resources */,
+				F0DBE5331A70ACDB005EB539 /* slip.mp3 in Resources */,
+				F0DBE5351A70AE45005EB539 /* crash.mp3 in Resources */,
 				F034D2641A0AE94600CCF238 /* Images.xcassets in Resources */,
-				F0D536851A255E7700DD5957 /* SOUND7.WAV in Resources */,
 				F05D82121A6D949A00416740 /* chomp.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

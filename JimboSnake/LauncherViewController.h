@@ -21,6 +21,9 @@
 // for playing clear button sound
 @property (strong, nonatomic) AVAudioPlayer *clearButtonPlayer;
 
+// peek button sound
+@property (strong, nonatomic) AVAudioPlayer *peekButtonPlayer;
+
 // bomb icon
 @property (strong, nonatomic) IBOutlet UIImageView *bomb;
 

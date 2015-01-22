@@ -58,18 +58,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5KI-rf-WeE">
-                                <rect key="frame" x="189" y="252" width="15" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="E0z-od-0e6" appends="YES" id="h2g-qm-rcc"/>
-                                    <outletCollection property="gestureRecognizers" destination="0aR-p6-qPm" appends="YES" id="fDS-Q0-HMH"/>
-                                    <outletCollection property="gestureRecognizers" destination="DR0-BR-XyK" appends="YES" id="8yH-E2-kic"/>
-                                    <outletCollection property="gestureRecognizers" destination="e0z-Kb-Ury" appends="YES" id="d1y-q9-8ri"/>
-                                </connections>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="B2s-0F-nOG">
                                 <rect key="frame" x="159" y="252" width="15" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,8 +153,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mariomushroom1up_vectorized.png" id="s1e-4S-65i">
-                                <rect key="frame" x="193" y="3" width="30" height="38"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorToons-Food-012_vectorized.png" id="s1e-4S-65i">
+                                <rect key="frame" x="193" y="3" width="37" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Pg0-Jh-EmO">
@@ -175,7 +163,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="NDb-ne-rza">
-                                <rect key="frame" x="80" y="211" width="150" height="131"/>
+                                <rect key="frame" x="106" y="361" width="150" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="gameover.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,8 +174,8 @@
                                     <segue destination="y8e-cY-hws" kind="modal" id="uq4-hj-NrQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="RXz-MV-WxM">
-                                <rect key="frame" x="77" y="205" width="157" height="144"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="RXz-MV-WxM">
+                                <rect key="frame" x="75" y="367" width="157" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="120218TryAgain.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -196,6 +184,17 @@
                                     <action selector="tryAgainButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t1S-wK-Rcs"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake_head.png" id="5KI-rf-WeE">
+                                <rect key="frame" x="189" y="252" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="E0z-od-0e6" appends="YES" id="h2g-qm-rcc"/>
+                                    <outletCollection property="gestureRecognizers" destination="0aR-p6-qPm" appends="YES" id="fDS-Q0-HMH"/>
+                                    <outletCollection property="gestureRecognizers" destination="DR0-BR-XyK" appends="YES" id="8yH-E2-kic"/>
+                                    <outletCollection property="gestureRecognizers" destination="e0z-Kb-Ury" appends="YES" id="d1y-q9-8ri"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="mGR-Vp-LSy"/>
@@ -276,6 +275,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="settingsButtonPressed:" destination="y8e-cY-hws" eventType="touchUpInside" id="2IM-NX-cTC"/>
                                     <segue destination="ggH-Ks-3IN" kind="modal" id="XjO-d5-Doj"/>
                                 </connections>
                             </button>
@@ -287,6 +287,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="howtoPlayButtonPressed:" destination="y8e-cY-hws" eventType="touchUpInside" id="8VK-eB-iCZ"/>
                                     <segue destination="VLf-cf-Hs4" kind="modal" id="reu-oI-WtC"/>
                                 </connections>
                             </button>
@@ -427,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="XHG-UM-pKd">
-                                <rect key="frame" x="208" y="504" width="60" height="44"/>
+                                <rect key="frame" x="208" y="509" width="60" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Rules">
@@ -449,7 +450,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="EEk-6n-vK8">
-                                <rect key="frame" x="41" y="504" width="60" height="44"/>
+                                <rect key="frame" x="38" y="509" width="60" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Back">
@@ -459,46 +460,46 @@
                                     <segue destination="y8e-cY-hws" kind="modal" id="KIg-Pf-JCF"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Swipe your finger on the game board LEFT, RIGHT, UP or DOWN to move the snake in that direction." id="tKI-ih-Kj4">
-                                <rect key="frame" x="11" y="315" width="228" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TIP: Guide your snake to these to earn extra lives!" id="opL-89-Fcy">
-                                <rect key="frame" x="59" y="406" width="109" height="88"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TIP: Guide your snake to these hot dogs to earn extra lives!" id="opL-89-Fcy">
+                                <rect key="frame" x="86" y="406" width="109" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="31z-d6-t6U">
-                                <rect key="frame" x="6" y="199" width="315" height="91"/>
+                                <rect key="frame" x="6" y="185" width="315" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Guide the snake to eat as many blocks of food as you can! For each block you earn a point. As you advance further the snake will move faster and become more difficult to guide.</string>
+                                <string key="text">Guide the snake to eat as many blocks of food as you can! For each block you earn a point. As you advance further the snake will move faster and become more difficult to guide. You will begin with 5 lives and there are 5 distinct levels.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move the Snake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hoo-p4-dTG">
-                                <rect key="frame" x="11" y="291" width="127" height="21"/>
+                                <rect key="frame" x="11" y="306" width="127" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mariomushroom1up_vectorized.png" id="YEA-fj-LkO">
-                                <rect key="frame" x="181" y="431" width="30" height="38"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorToons-Food-012_vectorized.png" id="YEA-fj-LkO">
+                                <rect key="frame" x="203" y="432" width="85" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VLP-x3-flB">
-                                <rect key="frame" x="11" y="178" width="75" height="21"/>
+                                <rect key="frame" x="11" y="165" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Swipe your finger on the game board LEFT, RIGHT, UP or DOWN to move the snake in that direction." id="tKI-ih-Kj4">
+                                <rect key="frame" x="6" y="324" width="228" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -506,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bc-S2-xaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-800" y="970"/>
+            <point key="canvasLocation" x="-844" y="1376"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UYl-dr-9OC">
@@ -517,25 +518,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="hih-8i-zxZ">
-                                <rect key="frame" x="40" y="509" width="60" height="44"/>
+                                <rect key="frame" x="130" y="509" width="60" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="y8e-cY-hws" kind="modal" id="VkC-pf-0US"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="1RO-fP-cKz">
-                                <rect key="frame" x="200" y="509" width="65" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Basics">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VLf-cf-Hs4" kind="modal" id="cMc-FT-Ykw"/>
+                                    <segue destination="VLf-cf-Hs4" kind="modal" id="xKg-2M-koK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" id="Ofu-8L-ole">
@@ -550,79 +540,86 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Win" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4L6-Ye-JIe">
-                                <rect key="frame" x="15" y="264" width="91" height="21"/>
+                                <rect key="frame" x="15" y="246" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Lose a Life" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UXo-Tb-rab">
-                                <rect key="frame" x="16" y="349" width="147" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Lose" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UXo-Tb-rab">
+                                <rect key="frame" x="15" y="329" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Crash the snake into any sides of the border" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PMp-kC-9iH">
-                                <rect key="frame" x="11" y="372" width="362" height="21"/>
+                                <rect key="frame" x="11" y="349" width="362" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Lose all your lives" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8NS-r2-vGP">
+                                <rect key="frame" x="11" y="384" width="362" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Crash the snake into itself" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RS1-u9-2Nd">
-                                <rect key="frame" x="11" y="395" width="362" height="21"/>
+                                <rect key="frame" x="11" y="366" width="362" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Levels: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0aT-hH-bGg">
-                                <rect key="frame" x="15" y="185" width="158" height="21"/>
+                                <rect key="frame" x="15" y="157" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Number of Lives: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qfi-c4-q19">
-                                <rect key="frame" x="15" y="227" width="215" height="21"/>
+                                <rect key="frame" x="15" y="204" width="215" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score to Win: ∞" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUQ-X8-NhK">
-                                <rect key="frame" x="15" y="206" width="125" height="21"/>
+                                <rect key="frame" x="16" y="181" width="125" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jimbo's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jxy-8n-UrN">
-                                <rect key="frame" x="16" y="462" width="63" height="21"/>
+                                <rect key="frame" x="16" y="449" width="63" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="In JimboSnake you can keep playing indefinitely! Earn the highest score you can!" id="8fY-zk-jWB">
-                                <rect key="frame" x="11" y="280" width="299" height="66"/>
+                                <rect key="frame" x="11" y="262" width="299" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="high_score_logo.gif" id="xfB-4W-gW9">
+                                <rect key="frame" x="87" y="419" width="86" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="77" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Ue-FN-opm">
-                                <rect key="frame" x="189" y="449" width="71" height="47"/>
+                                <rect key="frame" x="190" y="436" width="71" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" red="0.074509806930000005" green="0.65098041299999998" blue="0.84705889229999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="high_score_logo.gif" id="xfB-4W-gW9">
-                                <rect key="frame" x="87" y="430" width="86" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.092876345129999996" green="0.1424475492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -630,16 +627,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYj-EY-SBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-61" y="1433"/>
+            <point key="canvasLocation" x="-413" y="1319"/>
         </scene>
     </scenes>
     <resources>
         <image name="120218TryAgain.png" width="300" height="300"/>
+        <image name="VectorToons-Food-012_vectorized.png" width="645" height="432"/>
         <image name="bomb12.png" width="64" height="64"/>
         <image name="gameover.png" width="202" height="202"/>
         <image name="high_score_logo.gif" width="269" height="176"/>
-        <image name="mariomushroom1up_vectorized.png" width="624" height="794"/>
         <image name="snakeIconScreen.png" width="120" height="120"/>
+        <image name="snake_head.png" width="68" height="61"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -647,7 +645,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Cs1-X1-hzG"/>
-        <segue reference="reu-oI-WtC"/>
+        <segue reference="uq4-hj-NrQ"/>
+        <segue reference="xKg-2M-koK"/>
     </inferredMetricsTieBreakers>
 </document>
