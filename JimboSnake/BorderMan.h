@@ -10,10 +10,12 @@
 
 #import <UIKit/UIKit.h>
 
+CGRect rectangle;
+
+
 @interface BorderMan : UIView
 
 // draw border
 - (void)drawRect:(CGRect)rect;
-
 
 @end

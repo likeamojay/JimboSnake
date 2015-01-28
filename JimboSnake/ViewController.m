@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WallofFame.h"
 #import "DBMan.h"
+#import "BorderMan.h"
 
 // Begin Main interface and implementation
 
@@ -176,6 +177,7 @@ CGFloat initialExtraLifeY;
     _levelLabel.text = [NSString stringWithFormat:@"%d",level];
     
     //Initialize lives
+    lives = 5;
     _livesLabel.text = [NSString stringWithFormat:@"%d",lives];
     
     // intially disable left-right movement
@@ -245,71 +247,19 @@ CGFloat initialExtraLifeY;
         [self moveFood];
         [self updateScore];
         
-    //If score greater then advance to next level
-    if(theScore == 5)
-    {
+        //If score is a multiple of 10 then advance to next level and give an extra life
+        if(theScore%10 == 0)
+        {
         level++;
         _levelLabel.text = [NSString stringWithFormat:@"%d",level];
         [_snakeTimer invalidate];
-         difficulty = 0.4;
+        difficulty = difficulty - 0.1;
         [self startTimer];
         [self moveExtraLife];
         _extraLife1.hidden = NO;
-    }
-        
-        if(theScore == 10)
-        {
-            level++;
-            _levelLabel.text = [NSString stringWithFormat:@"%d",level];
-            [_snakeTimer invalidate];
-            difficulty = 0.3;
-             [self startTimer];
-                 [self moveExtraLife];
-            _extraLife1.hidden = NO;
         }
         
-        if(theScore == 15)
-        {
-            level++;
-            _levelLabel.text = [NSString stringWithFormat:@"%d",level];
-            [_snakeTimer invalidate];
-            difficulty = 0.2;
-            [self startTimer];
-            [self moveExtraLife];
-            _extraLife1.hidden = NO;
-            
-        }
         
-        if(theScore == 20)
-        {
-            level++;
-            _levelLabel.text = [NSString stringWithFormat:@"%d",level];
-            [_snakeTimer invalidate];
-            difficulty = 0.1;
-            [self startTimer];
-                 [self moveExtraLife];
-            _extraLife1.hidden = NO;
-            
-        }
-        if(theScore == 25)
-        {
-            // win an extra life
-            [self moveExtraLife];
-            _extraLife1.hidden = NO;
-        }
-        if(theScore == 30)
-        {
-            // win an extra life
-            [self moveExtraLife];
-            _extraLife1.hidden = NO;
-        }
-        if(theScore == 35)
-        {
-            // win an extra life
-            [self moveExtraLife];
-            _extraLife1.hidden = NO;
-            
-        }
     }
  
     //if snake eats an extra life
@@ -406,17 +356,11 @@ CGFloat initialExtraLifeY;
         [self loser];
     }
     
-    // If snake crashes into the left or right side of border
-    if(_snakeBlock.center.x >= 315 || _snakeBlock.center.x <=10)
+    // If snake crashes into the border
+   /* if(CGRectIntersectsRect(rectangle,_snakeBlock.frame))
     {
         [self loser];
-    }
-    // If snake crashes into up or down side of border
-    if(_snakeBlock.center.y >= 545 || _snakeBlock.center.y <= 50)
-    {
-        [self loser];
-    }
-
+    }*/
 }
 
 -(void)moveFood
@@ -492,6 +436,7 @@ CGFloat initialExtraLifeY;
     
     // Save Score in database
     [[DBMan getSharedInstance]saveData:[NSString stringWithFormat:@"%2d",theScore]];
+    
 }
 
 
@@ -669,5 +614,13 @@ CGFloat initialExtraLifeY;
     _tryAgainButton.hidden = YES;
     
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // tell the music to STFU
+    [_musicPlayer stop];
+    [self.view resignFirstResponder];
+}
+
+
 @end
 
