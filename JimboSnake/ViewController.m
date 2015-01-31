@@ -196,7 +196,7 @@ CGFloat initialExtraLifeY;
     ypos = 0;
 
     // set difficulty to level 1 = 0.6s
-    difficulty = 0.6;
+    difficulty = 0.5;
     
     
     // Start Timer
@@ -240,20 +240,26 @@ CGFloat initialExtraLifeY;
     // if snake eats the food
     if(CGRectIntersectsRect(_snakeBlock.frame, _food.frame))
     {
-        // play sound
-        self.snakeEatPlayer.currentTime = 0;
+        // play sound, move food, and then update score banner
         [self.snakeEatPlayer play];
-        
         [self moveFood];
         [self updateScore];
         
         //If score is a multiple of 10 then advance to next level and give an extra life
         if(theScore%10 == 0)
         {
+        // update level banner
         level++;
         _levelLabel.text = [NSString stringWithFormat:@"%d",level];
-        [_snakeTimer invalidate];
-        difficulty = difficulty - 0.1;
+            
+            // kill timer
+            [_snakeTimer invalidate];
+            if(difficulty !=0)
+            {
+                difficulty = difficulty - 0.05;
+            }
+        
+        // restart timer and move extra life
         [self startTimer];
         [self moveExtraLife];
         _extraLife1.hidden = NO;
