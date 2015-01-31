@@ -67,6 +67,9 @@
 // Catpure the picker view selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+
+     [self.squeezeButtonPlayer play];
+    
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
     if(row == 0)
@@ -99,7 +102,7 @@
 // save data and exit
 - (IBAction)saveButtonPressed:(UIButton *)sender {
     
-    [self.peekButtonPlayer setCurrentTime:0.4];
+  
     [self.peekButtonPlayer play];
     [_settings synchronize];
 }

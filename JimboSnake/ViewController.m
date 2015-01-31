@@ -355,7 +355,7 @@ CGFloat initialExtraLifeY;
     {
         [self loser];
     }
-    
+#pragma mark need to figure out how to do this
     // If snake crashes into the border
    /* if(CGRectIntersectsRect(rectangle,_snakeBlock.frame))
     {
