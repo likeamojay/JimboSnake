@@ -11,11 +11,19 @@
 #import "DBMan.h"
 #import "BorderMan.h"
 
-// Begin Main interface and implementation
+// Border Constraints
+static float BORDER_MIN_HORIZ = 10.0;
+static float BORDER_MAX_HORIZ = 315.0;
+static float BORDER_MIN_VERT = 50.0;
+static float BORDER_MAX_VERT = 545.0;
+
 
 @interface ViewController ()
+
+
 @end
 
+// Points for initial poisiton of snakeblock and extra life
 CGFloat initialSnakeX;
 CGFloat initialSnakeY;
 CGFloat initialExtraLifeX;
@@ -24,16 +32,17 @@ CGFloat initialExtraLifeY;
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     
     //Initialize sound effects
-    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"crash2"ofType:@"mp3"];
+    NSString *filePathCrashSound = [[NSBundle mainBundle] pathForResource:@"crash"ofType:@"mp3"];
     NSURL *fileURLCrashSound = [NSURL fileURLWithPath:filePathCrashSound];
     self.snakeCrashedPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLCrashSound error:nil];
     [self.snakeCrashedPlayer prepareToPlay];
     
     
-    NSString *filePathGameOverSound = [[NSBundle mainBundle] pathForResource:@"crash"ofType:@"mp3"];
+    NSString *filePathGameOverSound = [[NSBundle mainBundle] pathForResource:@"crash2"ofType:@"mp3"];
     NSURL *fileURLGameOverSound = [NSURL fileURLWithPath:filePathGameOverSound];
     self.gameOverSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLGameOverSound error:nil];
     [self.gameOverSoundPlayer prepareToPlay];
@@ -48,10 +57,16 @@ CGFloat initialExtraLifeY;
     self.snakeEatPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLSnakeEat  error:nil];
     [self.snakeEatPlayer prepareToPlay];
     
+    NSString *filePathMusic = [[NSBundle mainBundle] pathForResource:@"music"ofType:@"mp3"];
+    NSURL *fileURLMusic = [NSURL fileURLWithPath:filePathMusic ];
+    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLMusic  error:nil];
+    [self.musicPlayer prepareToPlay];
+    
+    
     // Load and apply user settings
     _settings = [NSUserDefaults standardUserDefaults];
     
-    // Background color
+    // Change background color based on selection in NSUserDefaults
     NSString *theColor= [_settings objectForKey:@"background"];
     if([theColor isEqualToString:@"retroGreen"] == YES)
     {
@@ -79,7 +94,7 @@ CGFloat initialExtraLifeY;
     }
     else
     {
-        NSLog(@"The NSUserDefaults Dictionary has something in it that shouldn't be there");
+        NSLog(@"The Dictionary has something in it that shouldn't be there");
  
     }
     
@@ -92,16 +107,12 @@ CGFloat initialExtraLifeY;
         // if it's not already playing
         if([self.musicPlayer isPlaying] == NO)
         {
-            NSString *filePathMusic = [[NSBundle mainBundle] pathForResource:@"music"ofType:@"mp3"];
-            NSURL *fileURLMusic = [NSURL fileURLWithPath:filePathMusic ];
-            self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURLMusic  error:nil];
-            [self.musicPlayer prepareToPlay];
             [self.musicPlayer setCurrentTime:1];
             [self.musicPlayer play];
         }
        
     }
-    
+
     
     
     // load view and hide back button
@@ -111,7 +122,6 @@ CGFloat initialExtraLifeY;
     
     // Hide extra lives
     _extraLife1.hidden = YES;
-    
     
     // hide extra blocks
     _snakeBlock6.hidden = YES;
@@ -205,11 +215,12 @@ CGFloat initialExtraLifeY;
     
 }
 
+   // start the timer to animate the snake
 -(void)startTimer{
-    // start the timer to animate the snake
     _snakeTimer = [NSTimer scheduledTimerWithTimeInterval:difficulty target:self selector:@selector(snakeIsMoving) userInfo:nil repeats:YES];
 }
 
+// Method called repeatedly by timer to move snake and check for extra lives and food intersection
 -(void)snakeIsMoving;
 {
     // change x and y coordinates based on value of xpos and ypos
@@ -228,8 +239,6 @@ CGFloat initialExtraLifeY;
     _snakeBlock8.center = CGPointMake(_snakeBlock7.center.x, _snakeBlock7.center.y);
     _snakeBlock7.center = CGPointMake(_snakeBlock6.center.x, _snakeBlock6.center.y);
     _snakeBlock6.center = CGPointMake(_snakeBlock5.center.x, _snakeBlock5.center.y);
-    
-    
     _snakeBlock5.center = CGPointMake(_snakeBlock4.center.x, _snakeBlock4.center.y);
    _snakeBlock4.center = CGPointMake(_snakeBlock3.center.x, _snakeBlock3.center.y);
   _snakeBlock3.center = CGPointMake(_snakeBlock2.center.x, _snakeBlock2.center.y);
@@ -254,7 +263,9 @@ CGFloat initialExtraLifeY;
             
             // kill timer
             [_snakeTimer invalidate];
-            if(difficulty !=0)
+            
+            // increase difficulty if not already at max difficulty (0.05)
+            if(difficulty !=0.05)
             {
                 difficulty = difficulty - 0.05;
             }
@@ -279,16 +290,12 @@ CGFloat initialExtraLifeY;
         _extraLife1.center = CGPointMake(initialExtraLifeX, initialExtraLifeY);
         
         // play sound
-        self.snakeEatPlayer.currentTime = 0;
         [self.snakeEatPlayer play];
-        
-      
-        
+   
     }
   
     
   // if snake crashes into itself
-    // I know this is really inefficient and could've used NSArrays but it's simple
     if(CGRectIntersectsRect(_snakeBlock.frame, _snakeBlock3.frame))
     {
         [self loser];
@@ -361,20 +368,21 @@ CGFloat initialExtraLifeY;
     {
         [self loser];
     }
-#pragma mark need to figure out how to do this
-    // If snake crashes into the border
-   /* if(CGRectIntersectsRect(rectangle,_snakeBlock.frame))
+
+    // If snake crashes into the vertical sides border
+    if(_snakeBlock.center.x >= BORDER_MAX_HORIZ || _snakeBlock.center.x <= BORDER_MIN_HORIZ)
     {
         [self loser];
-    }*/
+    }
+    if(_snakeBlock.center.y >= BORDER_MAX_VERT || _snakeBlock.center.y <= BORDER_MIN_VERT)
+    {
+        [self loser];
+    }
+
 }
 
 -(void)moveFood
 {
-    // Constraints:
-    // LeftX : 268, RightX = 48
-    // downY: 445, upY = 58
-    
     // pick a random number between the constraints of the rectangle drawn in BorderMan.m
     foodxpos = arc4random() %220;
     foodxpos = foodxpos + 48;
@@ -387,10 +395,6 @@ CGFloat initialExtraLifeY;
 
 -(void)moveExtraLife
 {
-    // Constraints:
-    // LeftX : 268, RightX = 48
-    // downY: 445, upY = 58
-    
     // pick a random number between the constraints of the rectangle drawn in BorderMan.m
     extraLifexpos = arc4random() %220;
     extraLifexpos = foodxpos + 48;
@@ -402,7 +406,10 @@ CGFloat initialExtraLifeY;
 }
 
 
--(void)loser{
+
+-(void)loser
+{
+    
     // lose a life
     lives--;
     _livesLabel.text = [NSString stringWithFormat:@"%d",lives];
@@ -410,22 +417,22 @@ CGFloat initialExtraLifeY;
     // if still have more lives then have another go at it.
     if(lives > 0)
     {
-        //crash sound
-        self.snakeCrashedPlayer.currentTime = 0;
+        //crash sound and kill timer
         [self.snakeCrashedPlayer play];
         [_snakeTimer invalidate];
         
         // show try again button
         _tryAgainButton.hidden = NO;
     }
-    else{
+    else
+    {
     // if no more lives then game is over
         [self gameOver];
     }
     
 }
 
-
+// method called to reveal game over button
 -(void)gameOver
 {
     // stop snake from moving
@@ -436,10 +443,8 @@ CGFloat initialExtraLifeY;
     _gameOverButton.hidden = NO;
     
     // game over sound
-    self.gameOverSoundPlayer.currentTime = 0;
     [self.gameOverSoundPlayer play];
  
-    
     // Save Score in database
     [[DBMan getSharedInstance]saveData:[NSString stringWithFormat:@"%2d",theScore]];
     

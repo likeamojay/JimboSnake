@@ -19,6 +19,7 @@ CGRect rectangle;
     
     // thickness of line
     CGContextSetLineWidth(context, 1.5);
+    
     // make it black
     CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     
@@ -28,6 +29,13 @@ CGRect rectangle;
     // put in on the screen
     CGContextAddRect(context, rectangle);
     CGContextStrokePath(context);
+    
+    
+    // Check constrains
+    NSLog(@"rectangle.origin.y: %f",rectangle.origin.y);
+    NSLog(@"rectangle.size.height: %f",rectangle.size.height);
+    NSLog(@"CGRectGetMinY(rectangle): %f",CGRectGetMinY(rectangle));
+    NSLog(@"CGRectGetMaxY(rectangle): %f",CGRectGetMaxY(rectangle));
 
 }
 
