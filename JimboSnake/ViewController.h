@@ -73,7 +73,7 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *livesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
-@property (strong, nonatomic) IBOutlet UIButton *gameOverButton;
+
 
 // Manager for user settings
 @property (strong,nonatomic) NSUserDefaults *settings;
@@ -93,8 +93,9 @@ BOOL snakeBlock20in;
 - (IBAction)upButtonPressed:(UISwipeGestureRecognizer*)sender;
 - (IBAction)downButtonPressed:(UISwipeGestureRecognizer *)sender;
 
-// Try again button and listener
+// Try again button and listener, game over button
 @property (strong, nonatomic) IBOutlet UIButton *tryAgainButton;
+@property (strong, nonatomic) IBOutlet UIButton *gameOverButton;
 - (IBAction)tryAgainButtonPressed:(UIButton *)sender;
 
 
@@ -104,7 +105,6 @@ BOOL snakeBlock20in;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock3;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock4;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock5;
-
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock6;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock7;
 @property (strong, nonatomic) IBOutlet UIImageView *snakeBlock8;

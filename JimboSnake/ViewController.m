@@ -7,16 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "WallofFame.h"
 #import "DBMan.h"
-#import "BorderMan.h"
 
 // Border Constraints
-static float BORDER_MIN_HORIZ = 10.0;
-static float BORDER_MAX_HORIZ = 315.0;
-static float BORDER_MIN_VERT = 50.0;
-static float BORDER_MAX_VERT = 545.0;
-
+float BORDER_MIN_HORIZ = 10.0;
+float BORDER_MAX_HORIZ = 315.0;
+float BORDER_MIN_VERT = 45.0;
+float BORDER_MAX_VERT = 545.0;
 
 @interface ViewController ()
 
@@ -176,6 +173,25 @@ CGFloat initialExtraLifeY;
     [_snakeSwipedUp setDirection:UISwipeGestureRecognizerDirectionUp];
     [self.view addGestureRecognizer:_snakeSwipedUp];
     
+    
+    // Modify border constraints if running on a device other than iPhone (4-inch)
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480) // iPhone (3.5 inch)
+        {
+            
+        }
+        else if(result.height == 667) // iPhone (4.7 inch)
+        {
+            BORDER_MAX_HORIZ = BORDER_MAX_HORIZ + 70;
+            BORDER_MAX_VERT = BORDER_MAX_VERT + 115;
+        }
+        else if(result.height == 736) // iPhone (5.5 inch)
+        {
+            
+        }
+    }
     
 
     // Initialize score to 0

@@ -12,6 +12,10 @@
 
 CGRect rectangle;
 
+// Border constraints offset for different screen sizes
+float BORDER_VERT_OFFSET;
+float BORDER_HORIZ_OFFSET;
+
 
 @interface BorderMan : UIView
 
