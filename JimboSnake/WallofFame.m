@@ -38,7 +38,7 @@ static WallofFame *sharedInstance;
     [self.music prepareToPlay];
     [_music play];
     
-    [_scoreArray addObject:@"Penis"];
+    [_scoreArray addObject:@""];
 }
 
 
